@@ -24,5 +24,20 @@ namespace P_SMulti_Tool
         {
             InitializeComponent();
         }
+
+        private void Dashboard_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Dashboard();
+        }
+
+        private void Residential_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Residential();
+        }
+
+        private void Auction_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Auction();
+        }
     }
 }

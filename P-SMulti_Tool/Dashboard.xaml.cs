@@ -8,31 +8,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Threading;
 
 namespace P_SMulti_Tool
 {
     /// <summary>
-    /// Interaction logic for LoginScreen.xaml
+    /// Interaction logic for Dashboard.xaml
     /// </summary>
-    public partial class LoginScreen : Window
+    public partial class Dashboard : Page
     {
-        public LoginScreen()
+        public Dashboard()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string user = UserName.Text;
-            string password = Password.Password;
-
-            Window main = new MainWindow();
-            main.Show();
-            Close();
-
-        }
-
     }
 }

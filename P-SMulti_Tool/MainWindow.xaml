@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Background="Navy"
         Title="MainWindow" Height="720" Width="1300">
     <Grid>
+        <Frame x:Name="Main" Margin="0,60,0,0" NavigationUIVisibility="Hidden"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="60" Background="Yellow">
+            <Button x:Name="Dashboard" Content="Dashboard" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Dashboard_Click" />
+            <Button x:Name="Residential" Content="Residential" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Residential_Click"/>
+            <Button x:Name="Auction" Content="Auction" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Auction_Click"/>
+        </StackPanel>
 
     </Grid>
 </Window>
