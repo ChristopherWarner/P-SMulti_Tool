@@ -12,6 +12,8 @@ namespace P_SMulti_Tool
         public bool Collected { get; set; }
         public DateTime CreateDate { get; set; }
 
+
+
     }
 }
 
