@@ -5,11 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:P_SMulti_Tool"
       mc:Ignorable="d" Background="Navy"
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="660" d:DesignWidth="1320"
       Title="Residential">
 
-    <Grid>
-        <TextBlock Text="Placeholder1" Foreground="Yellow" FontSize="45"/>
-
+    <Grid x:Name="ResidnetialGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+            <ColumnDefinition Width="132"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="66"/>
+        </Grid.RowDefinitions>
     </Grid>
 </Page>

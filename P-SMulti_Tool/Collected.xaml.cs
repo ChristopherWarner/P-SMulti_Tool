@@ -14,15 +14,13 @@ using System.Windows.Shapes;
 namespace P_SMulti_Tool
 {
     /// <summary>
-    /// Interaction logic for Dashboard.xaml
+    /// Interaction logic for Collected.xaml
     /// </summary>
-    public partial class Dashboard : Page
+    public partial class Collected : Page
     {
-        public Dashboard()
+        public Collected()
         {
             InitializeComponent();
         }
-        // if each field is clicked
-
     }
 }

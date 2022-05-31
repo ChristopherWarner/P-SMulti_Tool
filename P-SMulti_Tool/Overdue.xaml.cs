@@ -14,15 +14,13 @@ using System.Windows.Shapes;
 namespace P_SMulti_Tool
 {
     /// <summary>
-    /// Interaction logic for Dashboard.xaml
+    /// Interaction logic for Overdue.xaml
     /// </summary>
-    public partial class Dashboard : Page
+    public partial class Overdue : Page
     {
-        public Dashboard()
+        public Overdue()
         {
             InitializeComponent();
         }
-        // if each field is clicked
-
     }
 }
