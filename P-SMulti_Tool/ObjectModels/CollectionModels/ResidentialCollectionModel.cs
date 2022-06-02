@@ -4,7 +4,8 @@ using System.Text;
 
 namespace P_SMulti_Tool
 {
-    class AuctionCollectionModel : CollectionModel
+    class ResidentialCollectionModel : CollectionModel
     {
+
     }
 }

@@ -11,8 +11,26 @@ namespace P_SMulti_Tool
         public string Description { get; set; }
         public bool Collected { get; set; }
         public DateTime CreateDate { get; set; }
-        public DateTime CollectedOn { get; set; }
+        public DateTime? CollectedOn { get; set; } = null;
+
+        public CollectionModel()
+        {
+
+        }
+
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
