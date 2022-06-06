@@ -7,13 +7,14 @@ namespace P_SMulti_Tool
     class AuctionCollectionModel : CollectionModel
     {
 
-        private string? LotNumber { get; set; }
-        private string? DateOfSale { get; set; }
+        private string LotNumber { get; set; }
+        private string DateOfSale { get; set; }
         private string  AuctionHouse { get; set; }
 
-        private AuctionCollectionModel(string jobNumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
+        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
         {
-            JobNumber = jobNumber;
+
+            JobNumber = jobnumber;
             Name = name;
             Description = description;
             Collected = collected;

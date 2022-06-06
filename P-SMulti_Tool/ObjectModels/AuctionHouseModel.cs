@@ -10,8 +10,18 @@ namespace P_SMulti_Tool.ObjectModels
         public string Road { get; set; }
         public string Town { get; set; }
         public string Postcode { get; set; } 
-        public string TelNumber { get; set;}
+        public string ContactNumber { get; set;}
         public string Email { get; set; }
         
+        public AuctionHouseModel(string _Name, string _Road, string _Town, string _Postcode, string _ContactNumber, string _Email)
+        {
+            Name = _Name;
+            Road = _Road;   
+            Town = _Town;
+            Postcode = _Postcode;
+            ContactNumber = _ContactNumber;
+            Email = _Email;
+        }
+
     }
 }
