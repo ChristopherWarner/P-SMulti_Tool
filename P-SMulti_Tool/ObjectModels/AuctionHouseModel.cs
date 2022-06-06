@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool.ObjectModels
 {
-    class AuctionHouseModel
+     public class AuctionHouseModel
     {
         public string Name { get; set; }
         public string Road { get; set; }
@@ -22,6 +22,8 @@ namespace P_SMulti_Tool.ObjectModels
             ContactNumber = _ContactNumber;
             Email = _Email;
         }
+
+
 
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool
 {
-    class CollectionModel
+    public class CollectionModel
     {
         public string JobNumber { get; set; }
         public string Name { get; set; }
