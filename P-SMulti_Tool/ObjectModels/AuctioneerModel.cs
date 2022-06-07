@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool.ObjectModels
 {
-    class AuctionHouseModel
+     public class AuctioneerModel
     {
         public string Name { get; set; }
         public string Road { get; set; }
@@ -13,7 +13,7 @@ namespace P_SMulti_Tool.ObjectModels
         public string ContactNumber { get; set; }
         public string Email { get; set; }
 
-        public AuctionHouseModel(string _Name, string _Road, string _Town, string _Postcode, string _ContactNumber, string _Email)
+        public AuctioneerModel(string _Name, string _Road, string _Town, string _Postcode, string _ContactNumber, string _Email)
         {
             Name = _Name;
             Road = _Road;
@@ -23,20 +23,16 @@ namespace P_SMulti_Tool.ObjectModels
             Email = _Email;
         }
 
-        public static AuctionHouseModel CreateAuctionCollectionModel(string Name, string Road, string Town, string Postcode, string ContactNumber, string Email)
+        public static void CreateAuctionCollectionModel(string Name, string Road, string Town, string Postcode, string ContactNumber, string Email)
         {
-            AuctionHouseModel created = new AuctionHouseModel(Name, Road, Town, Postcode, ContactNumber, Email);
+            AuctioneerModel created = new AuctioneerModel(Name, Road, Town, Postcode, ContactNumber, Email);
 
-            return created;
+
         }
+        public static void PassToDatabaseAuctionHouse(AuctioneerModel created)
+        {
 
 
-
+        }
     }
-
-
-
 }
-
-    
-
