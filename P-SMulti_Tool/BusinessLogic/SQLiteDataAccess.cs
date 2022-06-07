@@ -24,7 +24,7 @@ namespace P_SMulti_Tool
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute
+                //cnn.Execute
             }
         }
         private static string LoadConnectionString(string ID = "Main")
