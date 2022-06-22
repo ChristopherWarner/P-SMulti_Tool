@@ -22,5 +22,10 @@ namespace P_SMulti_Tool
         {
             InitializeComponent();
         }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

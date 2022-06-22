@@ -27,12 +27,9 @@ namespace P_SMulti_Tool.ObjectModels
         {
             AuctioneerModel created = new AuctioneerModel(Name, Road, Town, Postcode, ContactNumber, Email);
 
+            SQLiteDataAccess.SaveAuctioneerModel(created);
 
         }
-        public static void PassToDatabaseAuctionHouse(AuctioneerModel created)
-        {
-
-
-        }
+      
     }
 }

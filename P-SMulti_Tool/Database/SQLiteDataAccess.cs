@@ -44,7 +44,7 @@ namespace P_SMulti_Tool
         }
 
         //Save auction collection passed to auction collection table in MainDB
-        public static void SaveAuctionCollectionModel()
+        public static void SaveAuctionCollectionModel(ObjectModels.AuctioneerModel passed)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
