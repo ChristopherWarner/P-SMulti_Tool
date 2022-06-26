@@ -64,11 +64,11 @@ namespace P_SMulti_Tool
         }
 
         //Save auctioneer model passed to auctioneer table in MainDB
-        public static void SaveAuctioneerModel()
+        public static void SaveAuctioneerModel(ObjectModels.AuctioneerModel created)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                //cnn.Execute
+                cnn.Execute("insert into (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)");
             }
         }
 

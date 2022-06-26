@@ -9,9 +9,9 @@ namespace P_SMulti_Tool
 
         private string LotNumber { get; set; }
         private string DateOfSale { get; set; }
-        private string  AuctionHouse { get; set; }
+        private ObjectModels.AuctioneerModel  AuctionHouse { get; set; }
 
-        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
+        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
         {
 
             JobNumber = jobnumber;
@@ -25,7 +25,7 @@ namespace P_SMulti_Tool
             AuctionHouse = auctionHouse;
         }
 
-        private static AuctionCollectionModel CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
+        private static AuctionCollectionModel CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
         {
             AuctionCollectionModel create = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouse);
 
