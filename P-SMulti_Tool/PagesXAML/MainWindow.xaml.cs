@@ -39,5 +39,10 @@ namespace P_SMulti_Tool
         {
             Main.Content = new Auction();
         }
+
+        private void AddAuctionCollection_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PagesXAML.AuctionCollection();
+        }
     }
 }

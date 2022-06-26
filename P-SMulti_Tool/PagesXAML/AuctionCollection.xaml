@@ -71,11 +71,11 @@
         <TextBlock x:Name="Description" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="4" Foreground="Yellow" Text="Description" TextAlignment="Center" FontSize="20"/>
         <TextBox x:Name="DescriptionTB" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="4" Grid.RowSpan="4" Background="Yellow" Margin="0,10,0,0"/>
 
-        <TextBlock x:Name="AuctionHouse" Grid.Column="11" Grid.Row="7" Grid.ColumnSpan="4" Foreground="Yellow" Text="Contact Number" TextAlignment="Center" FontSize="20"/>
+        <TextBlock x:Name="AuctionHouse" Grid.Column="11" Grid.Row="7" Grid.ColumnSpan="4" Foreground="Yellow" Text="Auction House" TextAlignment="Center" FontSize="20"/>
         <ListBox x:Name="AuctionHouseLB" Grid.Column="11" Grid.Row="8" Grid.ColumnSpan="4" Grid.RowSpan="4" Background="Yellow" Margin="0,10,0,0"/>
 
         
 
-        <Button x:Name="Submit" Grid.Column="8" Grid.Row="13" Grid.ColumnSpan="4" Content="Submit" Background="Yellow" Foreground="Navy" FontSize="22" BorderBrush="Navy" Click="Submit_Click"/>
+        <Button x:Name="Submit" Grid.Column="8" Grid.Row="13" Grid.ColumnSpan="4" Content="Submit" Background="Yellow" Foreground="Navy" FontSize="22" BorderBrush="Navy" Click="Submit_Click" Height="33" VerticalAlignment="Top"/>
     </Grid>
 </Page>

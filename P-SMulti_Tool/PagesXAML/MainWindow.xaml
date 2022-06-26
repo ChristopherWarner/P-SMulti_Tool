@@ -12,6 +12,7 @@
             <Button x:Name="Dashboard" Content="Dashboard" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Dashboard_Click" />
             <Button x:Name="Residential" Content="Residential" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Residential_Click"/>
             <Button x:Name="Auction" Content="Auction" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Auction_Click"/>
+            <Button x:Name="AddAuctionCollection" Content="Add Auction Collection" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="AddAuctionCollection_Click"/>
         </StackPanel>
 
     </Grid>

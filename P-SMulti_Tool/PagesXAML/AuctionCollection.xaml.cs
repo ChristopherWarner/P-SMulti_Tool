@@ -21,6 +21,10 @@ namespace P_SMulti_Tool.PagesXAML
         public AuctionCollection()
         {
             InitializeComponent();
+
+            List<ObjectModels.AuctioneerModel> returned = SQLiteDataAccess.LoadAuctioneers();
+
+            
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
