@@ -57,7 +57,7 @@ namespace P_SMulti_Tool
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<ObjectModels.AuctioneerModel>("select * from residential collection model", new DynamicParameters());
+                var output = cnn.Query<ObjectModels.AuctioneerModel>("select * from AuctionHouses", new DynamicParameters());
                 return output.AsList();
             }
 
@@ -73,7 +73,7 @@ namespace P_SMulti_Tool
         }
 
         
-        private static string LoadConnectionString(string ID = "Main")
+        private static string LoadConnectionString(string ID = "maindb")
         {
 
             return ConfigurationManager.ConnectionStrings[ID].ConnectionString;

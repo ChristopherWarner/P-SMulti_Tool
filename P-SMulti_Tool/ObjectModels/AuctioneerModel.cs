@@ -13,6 +13,11 @@ namespace P_SMulti_Tool.ObjectModels
         public string ContactNumber { get; set; }
         public string Email { get; set; }
 
+        public AuctioneerModel()
+        {
+
+        }
+
         public AuctioneerModel(string _Name, string _Road, string _Town, string _Postcode, string _ContactNumber, string _Email)
         {
             Name = _Name;
