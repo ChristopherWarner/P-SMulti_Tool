@@ -68,7 +68,7 @@ namespace P_SMulti_Tool
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)");
+                cnn.Execute("insert into AuctionHouses (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)", created);
             }
         }
 

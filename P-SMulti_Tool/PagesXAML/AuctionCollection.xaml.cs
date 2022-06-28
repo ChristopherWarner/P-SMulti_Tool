@@ -23,12 +23,12 @@ namespace P_SMulti_Tool.PagesXAML
             InitializeComponent();
 
             List<ObjectModels.AuctioneerModel> ToDisplay = SQLiteDataAccess.LoadAuctioneers();
-            AuctionHouseCB.DataContext = ToDisplay;
-
-
+            AuctionHouseCB.ItemsSource = ToDisplay;
+            
+          
 
         }
-        public List<ObjectModels.AuctioneerModel>
+       
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
