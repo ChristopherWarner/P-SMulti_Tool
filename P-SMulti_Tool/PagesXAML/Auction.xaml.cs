@@ -26,8 +26,7 @@ namespace P_SMulti_Tool
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            ObjectModels.AuctioneerModel created = new ObjectModels.AuctioneerModel(NameTB.Text, RoadTB.Text, TownTB.Text, PostcodeTB.Text, ContactTB.Text, EmailTB.Text);
-            SQLiteDataAccess.SaveAuctioneerModel(created);
+            ObjectModels.AuctioneerModel.CreateAuctioneerModel (NameTB.Text, RoadTB.Text, TownTB.Text, PostcodeTB.Text, ContactTB.Text, EmailTB.Text);
             //implement an acutal save check inclusive of exception handling
             bool savecheck = true;
 

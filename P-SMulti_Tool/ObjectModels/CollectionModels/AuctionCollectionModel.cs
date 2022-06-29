@@ -25,7 +25,7 @@ namespace P_SMulti_Tool
             AuctionHouse = auctionHouse;
         }
 
-        private static AuctionCollectionModel CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
+        public static AuctionCollectionModel CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
         {
             AuctionCollectionModel create = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouse);
 

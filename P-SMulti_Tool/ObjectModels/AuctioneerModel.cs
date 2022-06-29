@@ -28,7 +28,7 @@ namespace P_SMulti_Tool.ObjectModels
             Email = _Email;
         }
 
-        public static void CreateAuctionCollectionModel(string Name, string Road, string Town, string Postcode, string ContactNumber, string Email)
+        public static void CreateAuctioneerModel(string Name, string Road, string Town, string Postcode, string ContactNumber, string Email)
         {
             AuctioneerModel created = new AuctioneerModel(Name, Road, Town, Postcode, ContactNumber, Email);
 

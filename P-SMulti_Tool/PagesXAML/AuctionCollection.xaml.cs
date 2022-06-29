@@ -18,6 +18,8 @@ namespace P_SMulti_Tool.PagesXAML
     /// </summary>
     public partial class AuctionCollection : Page
     {
+        
+
         public AuctionCollection()
         {
             InitializeComponent();
@@ -25,14 +27,19 @@ namespace P_SMulti_Tool.PagesXAML
             List<ObjectModels.AuctioneerModel> ToDisplay = SQLiteDataAccess.LoadAuctioneers();
             AuctionHouseCB.ItemsSource = ToDisplay;
             
-          
+
 
         }
-       
+
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            List<ObjectModels.AuctioneerModel> Displayed = SQLiteDataAccess.LoadAuctioneers();
+            ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
 
+
+            AuctionCollectionModel created = new AuctionCollectionModel(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, selected);
+            AuctionCollectionModel.
         }
     }
 }
