@@ -25,23 +25,12 @@ namespace P_SMulti_Tool
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            //Type type = typeof(ResidentialCollectionModel);
-            //int fieldCount = type.GetProperties().Length;
+            ResidentialCollectionModel.CreateResidentialCollection(JobNumberTB.Text, NameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, Address1TB.Text, Address2TB.Text, PostCodeTB.Text, ContactNumberTB.Text);
 
-            //string[] details = new string[fieldCount];
+            PagesXAML.XAMLhelper.ClearTextBoxes(ResidentialGrid);
 
-            // deatils block to be passed to Res collection constructor
-
-            string jobnumber;
-            string name;
-            string description;
-            bool collected = false;
-            DateTime createdate = DateTime.Now;
-            DateTime? collectedon = null;
-            string address1;
-            string address2;
-            string postcode;
-            string contactnumber;
+            
         }
+
     }
 }

@@ -8,7 +8,7 @@
       d:DesignHeight="660" d:DesignWidth="1320"
       Title="AuctionCollection">
 
-    <Grid>
+    <Grid x:Name="AuctionCollectionGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="66"/>
             <ColumnDefinition Width="66"/>

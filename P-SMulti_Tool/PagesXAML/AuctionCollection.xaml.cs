@@ -34,12 +34,14 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            List<ObjectModels.AuctioneerModel> Displayed = SQLiteDataAccess.LoadAuctioneers();
+            
             ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
 
 
-            AuctionCollectionModel created = new AuctionCollectionModel(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, selected);
-            AuctionCollectionModel.
+            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, selected);
+
+            PagesXAML.XAMLhelper.ClearTextBoxes(AuctionCollectionGrid);
+       
         }
     }
 }

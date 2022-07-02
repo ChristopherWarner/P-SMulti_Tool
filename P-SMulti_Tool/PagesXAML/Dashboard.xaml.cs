@@ -22,7 +22,25 @@ namespace P_SMulti_Tool
         {
             InitializeComponent();
         }
-        // if each field is clicked
 
+        private void AlreadyCollected_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Click Registered0");
+        }
+
+        private void UpcomingCollections_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Click Registered1");
+        }
+
+        private void NotArranged_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Click Registered2");
+        }
+
+        private void AuctionCollections_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Click Registered3");
+        }
     }
 }

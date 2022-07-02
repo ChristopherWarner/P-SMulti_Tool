@@ -32,10 +32,11 @@ namespace P_SMulti_Tool
 
             if (savecheck == true)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 MessageBox.Show("Save Sucessful");
             }
 
+            PagesXAML.XAMLhelper.ClearTextBoxes(AuctionGrid);
         }
     }
 }

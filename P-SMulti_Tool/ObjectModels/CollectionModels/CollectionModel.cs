@@ -15,7 +15,13 @@ namespace P_SMulti_Tool
 
         public CollectionModel()
         {
-         
+
+        }
+        public static CollectionModel SetCollectedTrue(CollectionModel Received)
+        {
+            Received.Collected = true;
+            Received.CollectedOn = DateTime.Now;
+            return Received;
         }
 
 

@@ -8,7 +8,7 @@
       d:DesignHeight="660" d:DesignWidth="1320"
       Title="Residential">
 
-    <Grid x:Name="ResidnetialGrid">
+    <Grid x:Name="ResidentialGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="66"/>
             <ColumnDefinition Width="66"/>
@@ -62,7 +62,7 @@
         <TextBox x:Name="NameTB" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="4" Background="Yellow" Margin="0,10,0,0"/>
 
         <TextBlock x:Name="ContactNumber" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="4" Foreground="Yellow" Text="ContactNumber" TextAlignment="Center" FontSize="30"/>
-        <TextBox x:Name="COntactNumberTB" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="4" Background="Yellow" Margin="0,10,0,0" Grid.RowSpan="1"/>
+        <TextBox x:Name="ContactNumberTB" Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="4" Background="Yellow" Margin="0,10,0,0" Grid.RowSpan="1"/>
 
         <TextBlock x:Name="Address1" Grid.Column="13" Grid.Row="4" Grid.ColumnSpan="4" Foreground="Yellow" Text="Address Line 1" TextAlignment="Center" FontSize="30"/>
         <TextBox x:Name="Address1TB" Grid.Column="13" Grid.Row="5" Grid.ColumnSpan="4" Background="Yellow" Margin="0,10,0,0"/>

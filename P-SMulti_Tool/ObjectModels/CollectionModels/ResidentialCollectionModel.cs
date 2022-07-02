@@ -26,7 +26,7 @@ namespace P_SMulti_Tool
 
         }
 
-        public static void CreateCollection(string jobnumber, string name, string description, bool collected, DateTime createdate, DateTime? collectedon, string address1, string address2, string postcode, string contactnumber)
+        public static void CreateResidentialCollection(string jobnumber, string name, string description, bool collected, DateTime createdate, DateTime? collectedon, string address1, string address2, string postcode, string contactnumber)
         {
             ResidentialCollectionModel created = new ResidentialCollectionModel(jobnumber, name, description, collected, createdate, collectedon, address1, address2, postcode, contactnumber);
 
