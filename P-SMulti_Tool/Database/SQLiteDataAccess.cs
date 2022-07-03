@@ -37,18 +37,18 @@ namespace P_SMulti_Tool
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<AuctionCollectionModel>("select * from residential collection model", new DynamicParameters());
+                var output = cnn.Query<AuctionCollectionModel>("select * from AuctionCollections", new DynamicParameters());
                 return output.AsList();
             }
 
         }
 
         //Save auction collection passed to auction collection table in MainDB
-        public static void SaveAuctionCollectionModel(ObjectModels.AuctioneerModel passed)
+        public static void SaveAuctionCollectionModel(ObjectModels.AuctioneerModel created)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                //cnn.Execute
+                cnn.Execute("insert into AuctionHouses (JobNumber, Name, Description, Collected, CreateDate, CollectedOn, LotNumber, DateOfSale, AuctionHouse) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @LotNumber, @DateOfSale, @AuctionHouse)", created);
             }
         }
 

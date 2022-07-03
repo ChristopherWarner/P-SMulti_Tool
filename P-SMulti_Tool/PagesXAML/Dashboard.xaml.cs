@@ -21,6 +21,7 @@ namespace P_SMulti_Tool
         public Dashboard()
         {
             InitializeComponent();
+            
         }
 
         private void AlreadyCollected_Click(object sender, RoutedEventArgs e)
