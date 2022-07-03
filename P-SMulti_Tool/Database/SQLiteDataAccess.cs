@@ -16,18 +16,18 @@ namespace P_SMulti_Tool
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<ResidentialCollectionModel>("select * from residential collection model", new DynamicParameters());
+                var output = cnn.Query<ResidentialCollectionModel>("select * from ResidentialCollections", new DynamicParameters());
                 return output.AsList();
             }
 
         }
 
         //Save residential object to residential table in MainDB
-        public static void SaveResidentialCollectionModel()
+        public static void SaveResidentialCollectionModel(ResidentialCollectionModel created)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                //cnn.Execute
+                cnn.Execute("insert into ResidentialCollections (string JobNumber, Name, Description, Collected, CreateDate, CollectedOn, Address1, Address2, Postcode, ContactNumber) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @Address1, @Address2, @Postcode, @ContactNumber)", created);
             }
         }
 
