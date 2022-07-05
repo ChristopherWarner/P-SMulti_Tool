@@ -7,9 +7,14 @@ namespace P_SMulti_Tool
     public class AuctionCollectionModel : CollectionModel
     {
 
-        private string LotNumber { get; set; }
-        private string DateOfSale { get; set; }
-        private ObjectModels.AuctioneerModel  AuctionHouse { get; set; }
+        public string LotNumber { get; set; }
+        public string DateOfSale { get; set; }
+        public ObjectModels.AuctioneerModel  AuctionHouse { get; set; }
+
+        public AuctionCollectionModel()
+        {
+
+        }
 
         public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
         {

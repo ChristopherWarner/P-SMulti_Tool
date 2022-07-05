@@ -1,0 +1,14 @@
+﻿<Page x:Class="P_SMulti_Tool.PagesXAML.DashboardPages.OtherAuctionCollections"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML.DashboardPages"
+      mc:Ignorable="d" Background="Navy"
+      d:DesignHeight="660" d:DesignWidth="1100"
+      Title="OtherAuctionCollections">
+
+    <Grid>
+        <TextBlock Text="Other collections" FontSize="30" Foreground="Yellow"/>
+    </Grid>
+</Page>

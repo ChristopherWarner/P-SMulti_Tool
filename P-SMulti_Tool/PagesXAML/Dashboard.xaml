@@ -10,45 +10,21 @@
     
 
     <Grid x:Name="DashboardGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-            <ColumnDefinition Width="132"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-            <RowDefinition Height="66"/>
-        </Grid.RowDefinitions>
+        <StackPanel x:Name="DashboardStackPanel" HorizontalAlignment="Left">
+            <Button x:Name="RoseberyList" Content="Rosebery's List" Width="210" Height="165" Margin="10,0,0,0" Foreground="Yellow" FontSize="30" Background="Transparent" Style="{DynamicResource MouseOverRenderFalse}" Click="RoseberyList_Click"/>
+            <Button x:Name="OtherAuctionList" Content="Other Auction Collections" Width="210" Height="165" Margin="10,0,0,0" Foreground="Yellow" FontSize="18" Background="Transparent" Style="{DynamicResource MouseOverRenderFalse}" Click="OtherAuctionList_Click"/>
+            <Button x:Name="ArangingRequired" Content="Unarranged" Width="210" Height="165" Margin="10,0,0,0" Foreground="Yellow" FontSize="30" Background="Transparent" Style="{DynamicResource MouseOverRenderFalse}" Click="ArangingRequired_Click"/>
+            <Button x:Name="PastCollections" Content="Collected" Width="210" Height="165" Margin="10,0,0,0" Foreground="Yellow" FontSize="30" Background="Transparent" Style="{DynamicResource MouseOverRenderFalse}" Click="PastCollections_Click"/>
 
-        
-        <TextBlock Text="Already Collected" Foreground="Yellow" FontSize="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
-        <TextBlock Text="int count" Foreground="Yellow" FontSize="30" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button x:Name="AlreadyCollected" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2" Click="AlreadyCollected_Click" Style="{DynamicResource MouseOverRenderFalse}"/>
-        <TextBlock Text="Overdue" Foreground="Yellow" FontSize="30" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
-        <TextBlock Text="int count" Foreground="Yellow" FontSize="30" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button x:Name="OverdueCollections" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2" Style="{DynamicResource MouseOverRenderFalse}" Click="UpcomingCollections_Click"/>
-        <TextBlock Text="Arranging Required" Foreground="Yellow" FontSize="30" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
-        <TextBlock Text="int count" Foreground="Yellow" FontSize="30" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button x:Name="NotArranged" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2" Style="{DynamicResource MouseOverRenderFalse}" Click="NotArranged_Click"/>
-        <TextBlock Text="Rosebery List" Foreground="Yellow" FontSize="30" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3"/>
-        <TextBlock Text="int count" Foreground="Yellow" FontSize="30" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button x:Name="RoseberyList" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2" Style="{DynamicResource MouseOverRenderFalse}" Click="AuctionCollections_Click"/>
-        
+
+        </StackPanel>
+        <Frame x:Name="DashboardFrame" Margin="220,0,0,0"/>
+
+
+
+
+
+
 
 
     </Grid>

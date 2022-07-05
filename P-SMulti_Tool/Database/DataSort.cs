@@ -18,9 +18,21 @@ namespace P_SMulti_Tool.Database
         {
 
         }
-        public static void ReturnRoseberyList()
+        public static List<AuctionCollectionModel> ReturnRoseberyList()
         {
+            List<AuctionCollectionModel> loaded = SQLiteDataAccess.LoadAuctionCollections();
+            List<AuctionCollectionModel> Roseberys = new List<AuctionCollectionModel>();
 
+            for (int i = 0; i < loaded.Count; i++)
+            {
+                if (loaded[i].AuctionHouse.Name == "Rosebery")
+                {
+                    Roseberys.Add(loaded[i]);
+                }
+                else { }
+            }
+
+            return Roseberys;
         }
 
     }

@@ -24,24 +24,24 @@ namespace P_SMulti_Tool
             
         }
 
-        private void AlreadyCollected_Click(object sender, RoutedEventArgs e)
+        private void RoseberyList_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Click Registered0");
+            DashboardFrame.Content = new PagesXAML.DashboardPages.RoseberyList();
         }
 
-        private void UpcomingCollections_Click(object sender, RoutedEventArgs e)
+        private void OtherAuctionList_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Click Registered1");
+            DashboardFrame.Content = new PagesXAML.DashboardPages.OtherAuctionCollections();
         }
 
-        private void NotArranged_Click(object sender, RoutedEventArgs e)
+        private void ArangingRequired_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Click Registered2");
+            DashboardFrame.Content = new PagesXAML.DashboardPages.Unarranged();
         }
 
-        private void AuctionCollections_Click(object sender, RoutedEventArgs e)
+        private void PastCollections_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Click Registered3");
+            DashboardFrame.Content = new PagesXAML.DashboardPages.PreviousCollections();
         }
     }
 }
