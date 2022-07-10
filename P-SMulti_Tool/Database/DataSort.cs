@@ -25,7 +25,7 @@ namespace P_SMulti_Tool.Database
 
             for (int i = 0; i < loaded.Count; i++)
             {
-                if (loaded[i].AuctionHouse.Name == "Rosebery")
+                if (loaded[i].AuctionHouseNumber == )
                 {
                     Roseberys.Add(loaded[i]);
                 }
@@ -33,6 +33,12 @@ namespace P_SMulti_Tool.Database
             }
 
             return Roseberys;
+        }
+        public static int GetAuctionHouseName(AuctionCollectionModel recieved) 
+        {
+            List<ObjectModels.AuctioneerModel> returned = SQLiteDataAccess.GetAuctionHouseNumber(recieved.Name);
+            string returnedName = returned[0].Name;
+            
         }
 
     }

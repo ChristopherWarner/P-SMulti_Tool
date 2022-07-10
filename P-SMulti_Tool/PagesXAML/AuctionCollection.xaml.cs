@@ -36,11 +36,15 @@ namespace P_SMulti_Tool.PagesXAML
         {
             
             ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
+            string auctioneerName = selected.Name;
+            int auctioneerNumber = SQLiteDataAccess.GetAuctionHouseNumber(auctioneerName);
+            
 
 
-            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, selected);
 
-            PagesXAML.XAMLhelper.ClearTextBoxes(AuctionCollectionGrid);
+            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text,  );
+
+            XAMLhelper.ClearTextBoxes(AuctionCollectionGrid);
        
         }
     }

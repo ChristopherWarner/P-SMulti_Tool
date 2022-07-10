@@ -10,7 +10,34 @@ using Dapper;
 namespace P_SMulti_Tool
 {
     public class SQLiteDataAccess
+
     {
+        public static int GetAuctionHouseNumber(string Name)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var auctioneer = cnn.Query<ObjectModels.AuctioneerModel>("select AuctionHouseNumber from AuctionHouses WHERE AuctioneerName = @Name", new DynamicParameters());
+                return Convert.ToInt32(auctioneer);
+            }
+            
+            
+            
+        }
+        
+        public static List<AuctionCollectionModel> ReturnRoseberyList(AuctionCollectionModel passed)
+        {
+            var AuctionHouseNumber = passed.AuctionHouseNumber;
+            
+            using(IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var auctioneer = cnn.Query<ResidentialCollectionModel>("select * from AuctionHouses WHERE AuctionHouseNumber = @AuctionHouseNumber", new DynamicParameters());
+            }
+
+
+
+            
+        }
+
         //Return residentials in List<T>
         public static List<ResidentialCollectionModel> LoadResidentialCollections()
         {
@@ -43,12 +70,12 @@ namespace P_SMulti_Tool
 
         }
 
-        //Save auction collection passed to auction collection table in MainDB
-        public static void SaveAuctionCollectionModel(ObjectModels.AuctioneerModel created)
+        //Save auction collection passed to AuctionCollection table in MainDB
+        public static void SaveAuctionCollectionModel(AuctionCollectionModel created)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert into AuctionHouses (JobNumber, Name, Description, Collected, CreateDate, CollectedOn, LotNumber, DateOfSale, AuctionHouse) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @LotNumber, @DateOfSale, @AuctionHouse)", created);
+                cnn.Execute("insert into AuctionCollections (JobNumber, Name, Description, Collected, CreateDate, CollectedOn, LotNumber, DateOfSale, AuctionHouse) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @LotNumber, @DateOfSale, @AuctionHouse)", created);
             }
         }
 
@@ -71,6 +98,7 @@ namespace P_SMulti_Tool
                 cnn.Execute("insert into AuctionHouses (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)", created);
             }
         }
+        public static ObjectModels.AuctioneerModel 
 
         
         private static string LoadConnectionString(string ID = "maindb")

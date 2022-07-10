@@ -9,14 +9,14 @@ namespace P_SMulti_Tool
 
         public string LotNumber { get; set; }
         public string DateOfSale { get; set; }
-        public ObjectModels.AuctioneerModel  AuctionHouse { get; set; }
+        public int  AuctionHouseNumber { get; set; }
 
         public AuctionCollectionModel()
         {
 
         }
 
-        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
+        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, int auctionHouseNumber)
         {
 
             JobNumber = jobnumber;
@@ -27,14 +27,15 @@ namespace P_SMulti_Tool
             CollectedOn = collectedOn;
             LotNumber = lotNumber;
             DateOfSale = dateOfSale;
-            AuctionHouse = auctionHouse;
+            AuctionHouseNumber = auctionHouseNumber;
         }
 
-        public static AuctionCollectionModel CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, ObjectModels.AuctioneerModel auctionHouse)
+        public static void CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, int auctionHouseNumber)
         {
-            AuctionCollectionModel create = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouse);
+            AuctionCollectionModel created = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouseNumber);
 
-            return create;
+
+            SQLiteDataAccess.SaveAuctionCollectionModel(created);
         }
 
 
