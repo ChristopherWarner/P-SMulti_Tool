@@ -34,15 +34,17 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+
+            //ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
+            //string auctioneerName = selected.Name;
+            //List<ObjectModels.AuctioneerModel> returned = SQLiteDataAccess.GetAuctionHouseNumber(auctioneerName);
+            //string auctioneerNumber = returned[0].;
             
-            ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
-            string auctioneerName = selected.Name;
-            int auctioneerNumber = SQLiteDataAccess.GetAuctionHouseNumber(auctioneerName);
             
 
 
 
-            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text,  );
+            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, auctioneerNumber);
 
             XAMLhelper.ClearTextBoxes(AuctionCollectionGrid);
        

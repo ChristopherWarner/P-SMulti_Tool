@@ -12,25 +12,26 @@ namespace P_SMulti_Tool
     public class SQLiteDataAccess
 
     {
-        public static int GetAuctionHouseNumber(string Name)
+        public static List<ObjectModels.AuctioneerModel> GetAuctionHouseNumber(string Name)
         {
+
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var auctioneer = cnn.Query<ObjectModels.AuctioneerModel>("select AuctionHouseNumber from AuctionHouses WHERE AuctioneerName = @Name", new DynamicParameters());
-                return Convert.ToInt32(auctioneer);
+                var auctioneer = cnn.Query<ObjectModels.AuctioneerModel>("select AuctionHouseNumber from AuctionHouses WHERE Name = @a", new { a = "%" + Name + "%" });
+                return auctioneer.AsList();
             }
             
             
             
         }
         
-        public static List<AuctionCollectionModel> ReturnRoseberyList(AuctionCollectionModel passed)
+        public static List<AuctionCollectionModel> ReturnRoseberyList()
         {
-            var AuctionHouseNumber = passed.AuctionHouseNumber;
             
             using(IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var auctioneer = cnn.Query<ResidentialCollectionModel>("select * from AuctionHouses WHERE AuctionHouseNumber = @AuctionHouseNumber", new DynamicParameters());
+                var roseberyList = cnn.Query<AuctionCollectionModel>("select * from AuctionCollections WHERE Name LIKE @a", new { a = "%" + "Rosebery" + "%" });
+                return roseberyList.AsList();
             }
 
 
@@ -98,7 +99,7 @@ namespace P_SMulti_Tool
                 cnn.Execute("insert into AuctionHouses (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)", created);
             }
         }
-        public static ObjectModels.AuctioneerModel 
+        
 
         
         private static string LoadConnectionString(string ID = "maindb")

@@ -21,9 +21,14 @@ namespace P_SMulti_Tool.PagesXAML.DashboardPages
         public RoseberyList()
         {
             InitializeComponent();
-            
 
-            RoseberyGrid.ItemsSource = Database.DataSort.ReturnRoseberyList();
+            List<AuctionCollectionModel> toDisplay = SQLiteDataAccess.ReturnRoseberyList();
+
+            for (int i = 0; i < toDisplay.Count; i++)
+            {
+                RoseberyGrid.Items.Add(toDisplay[i]);
+            }
+
         }
     }
 }
