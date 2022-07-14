@@ -12,34 +12,27 @@ namespace P_SMulti_Tool
     public class SQLiteDataAccess
 
     {
-        public static List<ObjectModels.AuctioneerModel> GetAuctionHouseNumber(string Name)
+        private static string LoadConnectionString(string ID = "maindb")
+        {
+
+            return ConfigurationManager.ConnectionStrings[ID].ConnectionString;
+        }
+
+        //****** - Start of Load Methods - *******//
+
+        public static List<AuctionCollectionModel> GetAuctionCollectionList(string Name)
         {
 
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var auctioneer = cnn.Query<ObjectModels.AuctioneerModel>("select AuctionHouseNumber from AuctionHouses WHERE Name = @a", new { a = "%" + Name + "%" });
+                var auctioneer = cnn.Query<AuctionCollectionModel>("select AuctionHouseNumber from AuctionHouses WHERE Name = @a", new { a = "%" + Name + "%" });
                 return auctioneer.AsList();
             }
             
             
             
         }
-        
-        public static List<AuctionCollectionModel> ReturnRoseberyList()
-        {
-            
-            using(IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                var roseberyList = cnn.Query<AuctionCollectionModel>("select * from AuctionCollections WHERE Name LIKE @a", new { a = "%" + "Rosebery" + "%" });
-                return roseberyList.AsList();
-            }
 
-
-
-            
-        }
-
-        //Return residentials in List<T>
         public static List<ResidentialCollectionModel> LoadResidentialCollections()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -50,17 +43,8 @@ namespace P_SMulti_Tool
 
         }
 
-        //Save residential object to residential table in MainDB
-        public static void SaveResidentialCollectionModel(ResidentialCollectionModel created)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                cnn.Execute("insert into ResidentialCollections (string JobNumber, Name, Description, Collected, CreateDate, CollectedOn, Address1, Address2, Postcode, ContactNumber) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @Address1, @Address2, @Postcode, @ContactNumber)", created);
-            }
-        }
 
-
-        // Return auction collections from MainDB in form of list <T>
+        //Following method will be converted to display auction collections that are not Rosebery
         public static List<AuctionCollectionModel> LoadAuctionCollections()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -71,16 +55,6 @@ namespace P_SMulti_Tool
 
         }
 
-        //Save auction collection passed to AuctionCollection table in MainDB
-        public static void SaveAuctionCollectionModel(AuctionCollectionModel created)
-        {
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                cnn.Execute("insert into AuctionCollections (JobNumber, Name, Description, Collected, CreateDate, CollectedOn, LotNumber, DateOfSale, AuctionHouse) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @LotNumber, @DateOfSale, @AuctionHouse)", created);
-            }
-        }
-
-        // load list of Auctioneer model from auctioneer table in MainDB in form of List<T>
         public static List<ObjectModels.AuctioneerModel> LoadAuctioneers()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -91,6 +65,34 @@ namespace P_SMulti_Tool
 
         }
 
+
+        //****** - End of Load Methods - *******//
+
+        //****** - Start of Save Methods - *******//
+
+        public static void SaveResidentialCollectionModel(ResidentialCollectionModel created)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert into ResidentialCollections (string JobNumber, Name, Description, Collected, CreateDate, CollectedOn, Address1, Address2, Postcode, ContactNumber) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @Address1, @Address2, @Postcode, @ContactNumber)", created);
+            }
+        }
+
+
+       
+
+        //Save auction collection passed to AuctionCollection table in MainDB
+        public static void SaveAuctionCollectionModel(AuctionCollectionModel created)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert into AuctionCollections (JobNumber, Name, Description, Collected, CreateDate, CollectedOn, LotNumber, DateOfSale, AuctionHouse) values (@JobNumber, @Name, @Description, @Collected, @CreateDate, @CollectedOn, @LotNumber, @DateOfSale, @AuctionHouse)", created);
+            }
+        }
+
+        
+      
+
         //Save auctioneer model passed to auctioneer table in MainDB
         public static void SaveAuctioneerModel(ObjectModels.AuctioneerModel created)
         {
@@ -99,14 +101,10 @@ namespace P_SMulti_Tool
                 cnn.Execute("insert into AuctionHouses (Name, Road, Town, Postcode, ContactNumber, Email) values (@Name, @Road, @Town, @Postcode, @ContactNumber, @Email)", created);
             }
         }
-        
 
-        
-        private static string LoadConnectionString(string ID = "maindb")
-        {
+        //****** - End of Save Methods - *******//
 
-            return ConfigurationManager.ConnectionStrings[ID].ConnectionString;
-        }
+
     }
 
 

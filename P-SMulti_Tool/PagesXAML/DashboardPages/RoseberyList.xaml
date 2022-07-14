@@ -9,7 +9,8 @@
       Title="RoseberyList">
 
     <Grid>
-        <DataGrid Style="{DynamicResource Navy/YellowDataGrid}" x:Name="RoseberyGrid" Width="900" Height="600" d:ItemsSource="{Binding}" Background="Navy" Foreground="Yellow" BorderBrush="Yellow" GridLinesVisibility="None"/>
+       
+        <DataGrid  x:Name="RoseberyGrid" Width="900" Height="600" DataContext="toDisplay"/>
 
     </Grid>
 </Page>

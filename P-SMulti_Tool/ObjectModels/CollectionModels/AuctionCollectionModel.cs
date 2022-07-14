@@ -9,14 +9,15 @@ namespace P_SMulti_Tool
 
         public string LotNumber { get; set; }
         public string DateOfSale { get; set; }
-        public int  AuctionHouseNumber { get; set; }
+        public string AuctionHouse { get; set; }
+       
 
         public AuctionCollectionModel()
         {
 
         }
 
-        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, int auctionHouseNumber)
+        public AuctionCollectionModel(string jobnumber, string name, string description, bool collected, DateTime createDate, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
         {
 
             JobNumber = jobnumber;
@@ -27,12 +28,12 @@ namespace P_SMulti_Tool
             CollectedOn = collectedOn;
             LotNumber = lotNumber;
             DateOfSale = dateOfSale;
-            AuctionHouseNumber = auctionHouseNumber;
+            AuctionHouse = auctionHouse;
         }
 
-        public static void CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, int auctionHouseNumber)
+        public static void CreateAuctionCollection(string jobNumber, string name, string description, bool collected, DateTime createdOn, DateTime collectedOn, string lotNumber, string dateOfSale, string auctionHouse)
         {
-            AuctionCollectionModel created = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouseNumber);
+            AuctionCollectionModel created = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouse);
 
 
             SQLiteDataAccess.SaveAuctionCollectionModel(created);
