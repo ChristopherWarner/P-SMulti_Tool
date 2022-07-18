@@ -9,8 +9,20 @@
       Title="RoseberyList">
 
     <Grid>
-       
-        <DataGrid  x:Name="RoseberyGrid" Width="900" Height="600" DataContext="toDisplay"/>
+        <DataGrid x:Name="RoseGrid">
+            <!-- Bindings and column headers -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
+                <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Lot Number" Width="100" Binding="{Binding LotNumber}"/>
+                <DataGridTextColumn Header="Date of Sale" Width="100" Binding="{Binding DateOfSale}"/>
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
 
     </Grid>
 </Page>

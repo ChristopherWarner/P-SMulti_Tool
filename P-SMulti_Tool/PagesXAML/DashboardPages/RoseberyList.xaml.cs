@@ -25,12 +25,21 @@ namespace P_SMulti_Tool.PagesXAML.DashboardPages
         {
             InitializeComponent();
 
-            List<AuctionCollectionModel> toConvert = SQLiteDataAccess.GetAuctionCollectionList("Rosebery");
-            ObservableCollection<AuctionCollectionModel> myCollection = new ObservableCollection<AuctionCollectionModel>(toConvert as List<AuctionCollectionModel>);
-            string name = myCollection[0].Name;
-            MessageBox.Show(name);
+            List<AuctionCollectionModel> toConvert = SQLiteDataAccess.LoadAuctionCollections();
+            ObservableCollection<AuctionCollectionModel> myCollection = new ObservableCollection<AuctionCollectionModel>(toConvert);
+            
+            string count = Convert.ToString(myCollection.Count);
+            MessageBox.Show(count);
+
+            for (int i = 0 ; i < toConvert.Count; i++)
+            {
+                RoseGrid.Items.Add(toConvert[i]);
+            }
+           
+            
            
 
         }
+
     }
 }
