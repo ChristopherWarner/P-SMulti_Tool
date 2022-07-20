@@ -37,14 +37,8 @@ namespace P_SMulti_Tool.PagesXAML
 
             ObjectModels.AuctioneerModel selected = (ObjectModels.AuctioneerModel)AuctionHouseCB.SelectedItem;
             string auctioneerName = selected.Name;
-          
 
-
-
-
-
-
-            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, auctioneerName);
+            AuctionCollectionModel.CreateAuctionCollection(JobNumberTB.Text, ClientNameTB.Text, DescriptionTB.Text, false, DateTime.Now, DateTime.MinValue, LotNumber.Text, DateOfSaleTB.Text, auctioneerName, null) ;
 
             XAMLhelper.ClearTextBoxes(AuctionCollectionGrid);
        

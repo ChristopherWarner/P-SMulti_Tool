@@ -5,11 +5,37 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML.DashboardPages"
       mc:Ignorable="d" Background="Navy"
-      d:DesignHeight="660" d:DesignWidth="1100"
+      d:DesignHeight="660" d:DesignWidth="1120"
       Title="RoseberyList">
+    <Grid Name="GridPanel" Background="Blue" Width="1120" Height="660"  
+   VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="C0" Width="112"/>
+            <ColumnDefinition Name="C1" Width="112"/>
+            <ColumnDefinition Name="C2" Width="112"/>
+            <ColumnDefinition Name="C3" Width="112"/>
+            <ColumnDefinition Name="C4" Width="112"/>
+            <ColumnDefinition Name="C5" Width="112"/>
+            <ColumnDefinition Name="C6" Width="112"/>
+            <ColumnDefinition Name="C7" Width="112"/>
+            <ColumnDefinition Name="C8" Width="112"/>
+            <ColumnDefinition Name="C9" Width="112"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="R0" Height="66"/>
+            <RowDefinition Name="R1" Height="66"/>
+            <RowDefinition Name="R2" Height="66"/>
+            <RowDefinition Name="R3" Height="66"/>
+            <RowDefinition Name="R4" Height="66"/>
+            <RowDefinition Name="R5" Height="66"/>
+            <RowDefinition Name="R6" Height="66"/>
+            <RowDefinition Name="R7" Height="66"/>
+            <RowDefinition Name="R8" Height="66"/>
+            <RowDefinition Name="R9" Height="66"/>
 
-    <Grid>
-        <DataGrid x:Name="RoseGrid">
+
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="RoseGrid" Grid.Column="0" Grid.ColumnSpan="10" Grid.Row="0" Grid.RowSpan="9" SelectionChanged="RoseGrid_SelectionChanged">
             <!-- Bindings and column headers -->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
@@ -20,9 +46,13 @@
 
             </DataGrid.Columns>
 
+            
+            
+
         </DataGrid>
 
-
+        <Button Margin="10,10,10,10" x:Name="ConfirmSuccesfulCollection" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button Margin="10,10,10,10" x:Name="ConfirmCollectionBooked" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

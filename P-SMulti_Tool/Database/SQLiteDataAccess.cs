@@ -20,19 +20,6 @@ namespace P_SMulti_Tool
 
         //****** - Start of Load Methods - *******//
 
-        public static List<AuctionCollectionModel> GetAuctionCollectionList(string Name)
-        {
-
-            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
-            {
-                var auctioneer = cnn.Query<AuctionCollectionModel>("select AuctionHouseNumber from AuctionHouses WHERE Name = @a", new { a = "%" + Name + "%" });
-                return auctioneer.AsList();
-            }
-            
-            
-            
-        }
-
         public static List<ResidentialCollectionModel> LoadResidentialCollections()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

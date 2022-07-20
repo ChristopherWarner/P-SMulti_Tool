@@ -27,19 +27,17 @@ namespace P_SMulti_Tool.PagesXAML.DashboardPages
 
             List<AuctionCollectionModel> toConvert = SQLiteDataAccess.LoadAuctionCollections();
             ObservableCollection<AuctionCollectionModel> myCollection = new ObservableCollection<AuctionCollectionModel>(toConvert);
-            
-            string count = Convert.ToString(myCollection.Count);
-            MessageBox.Show(count);
 
             for (int i = 0 ; i < toConvert.Count; i++)
             {
                 RoseGrid.Items.Add(toConvert[i]);
             }
-           
-            
-           
 
         }
 
+        private void RoseGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
