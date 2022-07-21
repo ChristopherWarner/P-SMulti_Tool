@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool"
         mc:Ignorable="d" Background="Navy"
-        Title="MainWindow" Height="740" Width="1320">
+        Title="MainWindow" Height="720" Width="1320">
     <Grid>
-
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="60" Background="Yellow">
+       
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" Background="Yellow" Grid.ColumnSpan="2">
             <Button x:Name="Dashboard" Content="Dashboard" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Dashboard_Click" />
             <Button x:Name="Residential" Content="Residential" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Residential_Click"/>
             <Button x:Name="Auction" Content="Auction" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Auction_Click"/>
             <Button x:Name="AddAuctionCollection" Content="Add Auction Collection" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="AddAuctionCollection_Click"/>
         </StackPanel>
-        <Frame x:Name="Main" Margin="0,60,0,0" NavigationUIVisibility="Hidden" Height="660"/>
-       
+        <Frame x:Name="Main" Margin="0,40,0,0" NavigationUIVisibility="Hidden" Height="660" Grid.ColumnSpan="2"/>
+
 
     </Grid>
 </Window>

@@ -5,9 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML.DashboardPages"
       mc:Ignorable="d" Background="Navy"
-      d:DesignHeight="660" d:DesignWidth="1120"
+      d:DesignHeight="640" d:DesignWidth="1120"
       Title="RoseberyList">
-    <Grid Name="GridPanel" Background="Blue" Width="1120" Height="660"  
+    <Grid Name="GridPanel" Background="Blue" Width="1120" Height="640"  
    VerticalAlignment="Top" HorizontalAlignment="Center" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Name="C0" Width="112"/>
@@ -22,16 +22,16 @@
             <ColumnDefinition Name="C9" Width="112"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Name="R0" Height="66"/>
-            <RowDefinition Name="R1" Height="66"/>
-            <RowDefinition Name="R2" Height="66"/>
-            <RowDefinition Name="R3" Height="66"/>
-            <RowDefinition Name="R4" Height="66"/>
-            <RowDefinition Name="R5" Height="66"/>
-            <RowDefinition Name="R6" Height="66"/>
-            <RowDefinition Name="R7" Height="66"/>
-            <RowDefinition Name="R8" Height="66"/>
-            <RowDefinition Name="R9" Height="66"/>
+            <RowDefinition Name="R0" Height="64"/>
+            <RowDefinition Name="R1" Height="64"/>
+            <RowDefinition Name="R2" Height="64"/>
+            <RowDefinition Name="R3" Height="64"/>
+            <RowDefinition Name="R4" Height="64"/>
+            <RowDefinition Name="R5" Height="64"/>
+            <RowDefinition Name="R6" Height="64"/>
+            <RowDefinition Name="R7" Height="64"/>
+            <RowDefinition Name="R8" Height="64"/>
+            <RowDefinition Name="R9" Height="64"/>
 
 
         </Grid.RowDefinitions>
