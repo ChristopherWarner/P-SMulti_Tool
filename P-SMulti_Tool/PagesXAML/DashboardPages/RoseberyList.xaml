@@ -35,14 +35,15 @@
 
 
         </Grid.RowDefinitions>
-        <DataGrid x:Name="RoseGrid" Grid.Column="0" Grid.ColumnSpan="10" Grid.Row="0" Grid.RowSpan="9" SelectionChanged="RoseGrid_SelectionChanged">
+        <DataGrid x:Name="RoseGrid" Grid.Column="0" Grid.ColumnSpan="10" Grid.Row="0" Grid.RowSpan="9" SelectionChanged="RoseGrid_SelectionChanged" AutoGenerateColumns="False">
             <!-- Bindings and column headers -->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
                 <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Lot Number" Width="100" Binding="{Binding LotNumber}"/>
                 <DataGridTextColumn Header="Date of Sale" Width="100" Binding="{Binding DateOfSale}"/>
-                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Description" Width="500" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Collected" Width="*" Binding="{Binding Collected}"/>
 
             </DataGrid.Columns>
 
@@ -51,8 +52,11 @@
 
         </DataGrid>
 
-        <Button Margin="10,10,10,10" x:Name="ConfirmSuccesfulCollection" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"/>
-        <Button Margin="10,10,10,10" x:Name="ConfirmCollectionBooked" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Button Margin="10,10,10,10" Content="Add To List" x:Name="AddToList" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Click="AddToList_Click"/>
+        <Button Margin="10,10,10,10" Content="Confirm Collections" x:Name="ConfirmCollections" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button Margin="10,10,10,10" Content="Parse List" x:Name="ParseList" Grid.Row="10" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Button Margin="10,10,10,10" Content="Print List" x:Name="PrintList" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Button Margin="10,10,10,10" Content="Confirm Collections" x:Name="ConfirmCollectins" Grid.Row="10" Grid.Column="8" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

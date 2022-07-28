@@ -25,19 +25,21 @@ namespace P_SMulti_Tool.PagesXAML.DashboardPages
         {
             InitializeComponent();
 
-            List<AuctionCollectionModel> toConvert = SQLiteDataAccess.LoadAuctionCollections();
-            ObservableCollection<AuctionCollectionModel> myCollection = new ObservableCollection<AuctionCollectionModel>(toConvert);
+            List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
 
-            for (int i = 0 ; i < toConvert.Count; i++)
-            {
-                RoseGrid.Items.Add(toConvert[i]);
-            }
+            RoseGrid.ItemsSource = roseberyCollections;
 
         }
 
         private void RoseGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void AddToList_Click(object sender, RoutedEventArgs e)
+        {
+            Window addToList = new Windows.AddToRosebery();
+            addToList.Show();
         }
     }
 }
