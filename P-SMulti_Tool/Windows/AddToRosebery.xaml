@@ -31,10 +31,64 @@
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="45"/>
-            
-        </Grid.RowDefinitions>
 
-        <ComboBox x:Name="NumberOfLots" Grid.Column="8" Grid.Row="2" Margin="0,10,0,10"/>
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="AddItemButton" Content="Add Item" Click="Button_Click" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Margin="40,10,40,12"/>
+        <Button Content="Add To List" Click="Button_Click" Grid.Column="4" Grid.Row="9" Grid.ColumnSpan="2" Margin="40,10,40,12"/>
+        <TextBlock x:Name="ClientNameTBlock" Grid.Column="2" Grid.Row="0" Text="Client Name" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="JobNumberTBlock" Grid.Column="7" Grid.Row="0" Text="Job Number" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="DateOfSaleTBlock" Grid.Column="0" Grid.Row="2" Text="Date Of Sale" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="ClientNameTB" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Background="Yellow" Margin="10"/>
+        <TextBox x:Name="JobNumberTB" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="3" Background="Yellow" Margin="10"/>
+        <TextBox x:Name="DateOfSaleTB" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="Yellow" Margin="10"/>
+
+
+        <ScrollViewer x:Name="AddItemScroll" Grid.Row="3" Grid.RowSpan="6" Grid.ColumnSpan="10">
+            <StackPanel x:Name="Items" Background="Yellow" Grid.Column="0" Grid.ColumnSpan="10" Grid.RowSpan="8" Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+                        <RowDefinition Height="27"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="DateOfSaleScrollTBlock" Grid.Column="0" Grid.Row="0" Text="Date Of Sale" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="LotNumberTBlock" Grid.Column="2" Grid.Row="0" Text="Lot Number" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="DescriptionTBlock" Grid.Column="4" Grid.Row="0" Text="Description" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="DateOfSaleScrollTB" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Background="Navy" Margin="0,5,0,5"/>
+                    <TextBox x:Name="LotNumberScrollTB" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="1" Background="Navy" Margin="0,5,0,5"/>
+                    <TextBox x:Name="DescriptionScrollTB" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="6" Background="Navy" Margin="0,5,40,5"/>
+                </Grid>
+
+
+
+            </StackPanel>
+        </ScrollViewer>
+
 
     </Grid>
 </Window>
