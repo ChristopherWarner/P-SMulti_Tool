@@ -3,91 +3,51 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:P_SMulti_Tool.Windows"
+        xmlns:local="clr-namespace:P_SMulti_Tool.UserControls"
         mc:Ignorable="d" Background="Navy"
         Title="AddToRosebery" Height="460" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="80"/>
-
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="45"/>
-
-        </Grid.RowDefinitions>
-        
-        <Button x:Name="AddItemButton" Content="Add Item" Click="Button_Click" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Margin="40,10,40,12"/>
-        <Button Content="Add To List" Click="Button_Click" Grid.Column="4" Grid.Row="9" Grid.ColumnSpan="2" Margin="40,10,40,12"/>
-        <TextBlock x:Name="ClientNameTBlock" Grid.Column="2" Grid.Row="0" Text="Client Name" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="JobNumberTBlock" Grid.Column="7" Grid.Row="0" Text="Job Number" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-        <TextBlock x:Name="DateOfSaleTBlock" Grid.Column="0" Grid.Row="2" Text="Date Of Sale" FontSize="13" Foreground="Yellow" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-        <TextBox x:Name="ClientNameTB" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Background="Yellow" Margin="10"/>
-        <TextBox x:Name="JobNumberTB" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="3" Background="Yellow" Margin="10"/>
-        <TextBox x:Name="DateOfSaleTB" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="Yellow" Margin="10"/>
+        <Grid Name="GridPanel" Background="Navy" Width="800" Height="460"  
+   VerticalAlignment="Top" HorizontalAlignment="Center" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="C0" Width="80"/>
+                <ColumnDefinition Name="C1" Width="80"/>
+                <ColumnDefinition Name="C2" Width="80"/>
+                <ColumnDefinition Name="C3" Width="80"/>
+                <ColumnDefinition Name="C4" Width="80"/>
+                <ColumnDefinition Name="C5" Width="80"/>
+                <ColumnDefinition Name="C6" Width="80"/>
+                <ColumnDefinition Name="C7" Width="80"/>
+                <ColumnDefinition Name="C8" Width="80"/>
+                <ColumnDefinition Name="C9" Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Name="R0" Height="45"/>
+                <RowDefinition Name="R1" Height="45"/>
+                <RowDefinition Name="R2" Height="45"/>
+                <RowDefinition Name="R3" Height="45"/>
+                <RowDefinition Name="R4" Height="45"/>
+                <RowDefinition Name="R5" Height="45"/>
+                <RowDefinition Name="R6" Height="45"/>
+                <RowDefinition Name="R7" Height="45"/>
+                <RowDefinition Name="R8" Height="45"/>
+                <RowDefinition Name="R" Height="45"/>
 
 
-        <ScrollViewer x:Name="AddItemScroll" Grid.Row="3" Grid.RowSpan="6" Grid.ColumnSpan="10">
-            <StackPanel x:Name="Items" Background="Yellow" Grid.Column="0" Grid.ColumnSpan="10" Grid.RowSpan="8" Grid.Row="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer  x:Name="ItemScroll" Grid.Row="2" Grid.ColumnSpan="10" Grid.RowSpan="7" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
+                <StackPanel x:Name="ItemsStackPanel" Height="315" Width="800">
+                <local:UserControl1/>
 
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-                        <RowDefinition Height="27"/>
-
-                    </Grid.RowDefinitions>
-
-                    <TextBlock x:Name="DateOfSaleScrollTBlock" Grid.Column="0" Grid.Row="0" Text="Date Of Sale" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="LotNumberTBlock" Grid.Column="2" Grid.Row="0" Text="Lot Number" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="DescriptionTBlock" Grid.Column="4" Grid.Row="0" Text="Description" FontSize="13" Foreground="Navy" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-                    <TextBox x:Name="DateOfSaleScrollTB" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Background="Navy" Margin="0,5,0,5"/>
-                    <TextBox x:Name="LotNumberScrollTB" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="1" Background="Navy" Margin="0,5,0,5"/>
-                    <TextBox x:Name="DescriptionScrollTB" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="6" Background="Navy" Margin="0,5,40,5"/>
-                </Grid>
+                </StackPanel>
 
 
+            </ScrollViewer>
+            <Button Content="Button" Click="Button_Click"/>
 
-            </StackPanel>
-        </ScrollViewer>
+        </Grid>
+
+
 
 
     </Grid>

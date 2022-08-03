@@ -8,34 +8,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace P_SMulti_Tool.Windows
+namespace P_SMulti_Tool.UserControls
 {
     /// <summary>
-    /// Interaction logic for AddToRosebery.xaml
+    /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class AddToRosebery : Window
+    public partial class UserControl1 : UserControl
     {
-        public AddToRosebery()
+        public UserControl1()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            UserControl toAdd = new UserControls.UserControl1();
-            ItemsStackPanel.Children.Add(toAdd);
-           
-
-           
-
-
-
-        }
-
-
     }
-
 }
