@@ -18,21 +18,25 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class AddToRosebery : Window
     {
+        public static List<UserControl> Items = new List<UserControl>();
+
         public AddToRosebery()
         {
             InitializeComponent();
+            AddToList(StaticControl);
         }
+        
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             UserControl toAdd = new UserControls.UserControl1();
             ItemsStackPanel.Children.Add(toAdd);
-           
-
-           
-
-
-
+            AddToList(toAdd);
+        }
+        private static void AddToList(UserControl Passed)
+        {
+            Items.Add(Passed);
         }
 
 

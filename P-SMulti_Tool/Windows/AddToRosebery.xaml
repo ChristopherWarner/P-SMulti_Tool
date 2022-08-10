@@ -35,15 +35,18 @@
 
 
             </Grid.RowDefinitions>
-            <ScrollViewer  x:Name="ItemScroll" Grid.Row="2" Grid.ColumnSpan="10" Grid.RowSpan="7" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
+            <ScrollViewer  x:Name="ItemScroll" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="6" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
                 <StackPanel x:Name="ItemsStackPanel" Height="315" Width="800">
-                <local:UserControl1/>
+                    <local:UserControl1 x:Name="StaticControl"/>
+
 
                 </StackPanel>
 
 
             </ScrollViewer>
-            <Button Content="Button" Click="Button_Click"/>
+            <Button Content="Add Item" Click="Button_Click" Grid.Column="7" Grid.ColumnSpan="2" Margin="50,10,50,10" Grid.Row="1"/>
+            <Button Content="Add Items To List" Click="Button_Click" Grid.Column="4" Grid.ColumnSpan="2" Margin="30,10,30,10" Grid.Row="9"/>
+            <TextBox x:Name="JobNumberInput" Text="Job Number" Grid.Row="2" Grid.Column="2"/>
 
         </Grid>
 

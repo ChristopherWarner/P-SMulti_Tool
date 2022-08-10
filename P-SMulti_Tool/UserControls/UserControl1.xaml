@@ -11,9 +11,11 @@
     <Grid Name="GridPanel" Background="Navy" Width="700" Height="45"  
    VerticalAlignment="Top" HorizontalAlignment="Center" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Name="C0" Width="100"/>
+            <ColumnDefinition Name="C0" Width="80"/>
             <ColumnDefinition Name="C1" Width="50"/>
-            <ColumnDefinition Name="C2" Width="*"/>
+            <ColumnDefinition Name="C2" Width="50"/>
+            <ColumnDefinition Name="C3" Width="50"/>
+            <ColumnDefinition Name="C4" Width="*"/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -23,8 +25,10 @@
         </Grid.RowDefinitions>
 
         <TextBox x:Name="LotNumInput" BorderBrush="Yellow" BorderThickness="3" Background="Navy" Grid.Column="0" Grid.Row="1" Foreground="Yellow"/>
-        <TextBox x:Name="DescriptionInput" BorderBrush="Yellow" BorderThickness="3" Background="Navy" Grid.Column="2" Grid.Row="1" Foreground="Yellow" />
+        <TextBox x:Name="DescriptionInput" BorderBrush="Yellow" BorderThickness="3" Background="Navy" Grid.Column="4" Grid.Row="1" Foreground="Yellow" />
+        <TextBox x:Name="DateOfSaleInput" BorderBrush="Yellow" BorderThickness="3" Background="Navy" Grid.Column="2" Grid.Row="1" Foreground="Yellow" />
         <TextBlock x:Name="LotNumber" Text="Lot Number" Foreground="Yellow" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
-        <TextBlock x:Name="Description" Text="Description" Foreground="Yellow" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock x:Name="DateOfSale" Text="Date" Foreground="Yellow" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock x:Name="Description" Text="Description" Foreground="Yellow" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="0"/>
     </Grid>
 </UserControl>
