@@ -22,5 +22,19 @@ namespace P_SMulti_Tool.UserControls
         {
             InitializeComponent();
         }
+        public List<string> ReturnDetails(UserControl1 Passed)
+        {
+            List<string> Details = new List<string>();
+
+            string convertedLotNum = Convert.ToString(Passed.LotNumInput);
+            string convertedDescription = Convert.ToString(Passed.Description);
+            string convertedDateOfSale = Convert.ToString(Passed.DateOfSaleInput);
+
+            Details.Add(convertedLotNum);
+            Details.Add(convertedDescription);
+            Details.Add(convertedDateOfSale);
+
+            return Details;
+        }
     }
 }

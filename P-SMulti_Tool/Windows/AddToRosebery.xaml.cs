@@ -25,21 +25,22 @@ namespace P_SMulti_Tool.Windows
             InitializeComponent();
             AddToList(StaticControl);
         }
-        
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            UserControl toAdd = new UserControls.UserControl1();
-            ItemsStackPanel.Children.Add(toAdd);
-            AddToList(toAdd);
-        }
         private static void AddToList(UserControl Passed)
         {
             Items.Add(Passed);
         }
 
+        private void Add_Item_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl toAdd = new UserControls.UserControl1();
+            ItemsStackPanel.Children.Add(toAdd);
+            AddToList(toAdd);
+        }
 
+        private void Add_Items_To_List(object sender, RoutedEventArgs e)
+        {
+            UserControl.UserControl1.
+        }
     }
-
 }
