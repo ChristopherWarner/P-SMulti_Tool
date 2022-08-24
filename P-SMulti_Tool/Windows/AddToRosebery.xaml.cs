@@ -18,7 +18,7 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class AddToRosebery : Window
     {
-        public static List<UserControl> Items = new List<UserControl>();
+        public static List<UserControls.UserControl1> Items = new List<UserControls.UserControl1>();
 
         public AddToRosebery()
         {
@@ -26,21 +26,25 @@ namespace P_SMulti_Tool.Windows
             AddToList(StaticControl);
         }
 
-        private static void AddToList(UserControl Passed)
+        private static void AddToList(UserControls.UserControl1 Passed)
         {
             Items.Add(Passed);
         }
 
         private void Add_Item_Click(object sender, RoutedEventArgs e)
         {
-            UserControl toAdd = new UserControls.UserControl1();
+            UserControls.UserControl1 toAdd = new UserControls.UserControl1();
             ItemsStackPanel.Children.Add(toAdd);
             AddToList(toAdd);
         }
 
         private void Add_Items_To_List(object sender, RoutedEventArgs e)
         {
-            UserControl.UserControl1.
+            for(int i = 0; i < Items.Count; i++)
+            {
+                AuctionCollectionModel.CreateAuctionCollection(JobNumberInput.Text, ClientNameInput.Text, Items[i].DescriptionInput.Text, false, DateTime.Now, DateTime.MinValue, Items[i].LotNumInput.Text, Items[i].DateOfSaleInput.Text, "Rosebery", 0);
+            }
+            Items.Clear();
         }
     }
 }
