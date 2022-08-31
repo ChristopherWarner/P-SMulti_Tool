@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool
 {
-    public class AuctionCollectionModel : CollectionModel
+    public class AuctionCollectionModel : BaseCollectionModel
     {
 
         public string LotNumber { get; set; }

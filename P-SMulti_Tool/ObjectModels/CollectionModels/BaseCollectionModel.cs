@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool
 {
-    public class CollectionModel
+    public class BaseCollectionModel
     {
         public string JobNumber { get; set; }
         public string Name { get; set; }
@@ -13,16 +13,21 @@ namespace P_SMulti_Tool
         public DateTime CreateDate { get; set; }
         public DateTime? CollectedOn { get; set; }
 
-        public CollectionModel()
+        public BaseCollectionModel()
         {
 
         }
-        public static CollectionModel SetCollectedTrue(CollectionModel Received)
+        public static BaseCollectionModel Set_Collected_True(BaseCollectionModel Received)
         {
             Received.Collected = true;
             Received.CollectedOn = DateTime.Now;
             return Received;
         }
+        public static BaseCollectionModel Update_Property(BaseCollectionModel Received)
+        {
+            return Received;
+        }
+  
 
 
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace P_SMulti_Tool
 {
-    public class ResidentialCollectionModel : CollectionModel
+    public class ResidentialCollectionModel : BaseCollectionModel
     {
         public string Address1 { get; set; }
         public string Address2 { get; set; }

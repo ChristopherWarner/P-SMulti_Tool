@@ -4,18 +4,52 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool"
-        mc:Ignorable="d" Background="Navy"
-        Title="MainWindow" Height="720" Width="1320">
-    <Grid>
-       
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="40" Background="Yellow" Grid.ColumnSpan="2">
-            <Button x:Name="Dashboard" Content="Dashboard" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Dashboard_Click" />
-            <Button x:Name="Residential" Content="Residential" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Residential_Click"/>
-            <Button x:Name="Auction" Content="Auction" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="Auction_Click"/>
-            <Button x:Name="AddAuctionCollection" Content="Add Auction Collection" Width="150" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18" Click="AddAuctionCollection_Click"/>
-        </StackPanel>
-        <Frame x:Name="Main" Margin="0,40,0,0" NavigationUIVisibility="Hidden" Height="660" Grid.ColumnSpan="2"/>
+        mc:Ignorable="d" Background="Navy" SizeToContent="Width" Height="720"
+        Title="MainWindow">
 
+    <Grid Name="GridPanel" Background="Navy">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="C0" Width="*"/>
+            <ColumnDefinition Name="C1" Width="*"/>
+            <ColumnDefinition Name="C2" Width="*"/>
+            <ColumnDefinition Name="C3" Width="*"/>
+            <ColumnDefinition Name="C4" Width="*"/>
+            <ColumnDefinition Name="C5" Width="*"/>
+            <ColumnDefinition Name="C6" Width="*"/>
+            <ColumnDefinition Name="C7" Width="*"/>
+            <ColumnDefinition Name="C8" Width="*"/>
+            <ColumnDefinition Name="C9" Width="*"/>
+            <ColumnDefinition Name="C10" Width="*"/>
+            <ColumnDefinition Name="C11" Width="*"/>
+            <ColumnDefinition Name="C12" Width="*"/>
+            <ColumnDefinition Name="C13" Width="*"/>
+            <ColumnDefinition Name="C14" Width="*"/>
+            <ColumnDefinition Name="C15" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="R0" Height="*"/>
+            <RowDefinition Name="R1" Height="*"/>
+            <RowDefinition Name="R2" Height="*"/>
+            <RowDefinition Name="R3" Height="*"/>
+            <RowDefinition Name="R4" Height="*"/>
+            <RowDefinition Name="R5" Height="*"/>
+            <RowDefinition Name="R6" Height="*"/>
+            <RowDefinition Name="R7" Height="*"/>
+            <RowDefinition Name="R8" Height="*"/>
+            <RowDefinition Name="R9" Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="16" Grid.RowSpan="1" Background="Yellow">
+            <Button x:Name="Rosebery" Content="Rosebery Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+            <Button x:Name="Residential" Content="Residential Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+            <Button x:Name="Auction" Content="Auction Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+            <Label x:Name="AppTitle" Content="Collections Manager V1" Width="400" Background="Navy" BorderBrush="Yellow" BorderThickness="2" Foreground="Yellow" HorizontalContentAlignment="Center" FontSize="18"/>
+            <Button x:Name="Aucion" Content="Auction Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+            <Button x:Name="ucion" Content="Auction Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+            <Button x:Name="Acion" Content="Auction Collections" Width="200" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="18"/>
+           
+        </StackPanel>
 
     </Grid>
 </Window>
