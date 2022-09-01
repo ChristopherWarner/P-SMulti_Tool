@@ -1,62 +1,57 @@
-﻿<Page x:Class="P_SMulti_Tool.PagesXAML.DashboardPages.RoseberyList"
+﻿<Page x:Class="P_SMulti_Tool.PagesXAML.RoseberyList"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML.DashboardPages"
-      mc:Ignorable="d" Background="Navy"
-      d:DesignHeight="640" d:DesignWidth="1120"
+      xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML"
+      mc:Ignorable="d" Background="Navy" ShowsNavigationUI="False"
+      d:DesignHeight="576" d:DesignWidth="1600"
       Title="RoseberyList">
-    <Grid Name="GridPanel" Background="Blue" Width="1120" Height="640"  
-   VerticalAlignment="Top" HorizontalAlignment="Center" >
+
+    <Grid x:Name="MainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Name="C0" Width="112"/>
-            <ColumnDefinition Name="C1" Width="112"/>
-            <ColumnDefinition Name="C2" Width="112"/>
-            <ColumnDefinition Name="C3" Width="112"/>
-            <ColumnDefinition Name="C4" Width="112"/>
-            <ColumnDefinition Name="C5" Width="112"/>
-            <ColumnDefinition Name="C6" Width="112"/>
-            <ColumnDefinition Name="C7" Width="112"/>
-            <ColumnDefinition Name="C8" Width="112"/>
-            <ColumnDefinition Name="C9" Width="112"/>
+             <ColumnDefinition Name="C0" Width="*"/>
+             <ColumnDefinition Name="C1" Width="*"/>
+             <ColumnDefinition Name="C2" Width="*"/>
+             <ColumnDefinition Name="C3" Width="*"/>
+             <ColumnDefinition Name="C4" Width="*"/>
+             <ColumnDefinition Name="C5" Width="*"/>
+             <ColumnDefinition Name="C6" Width="*"/>
+             <ColumnDefinition Name="C7" Width="*"/>
+             <ColumnDefinition Name="C8" Width="*"/>
+             <ColumnDefinition Name="C9" Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Name="R0" Height="64"/>
-            <RowDefinition Name="R1" Height="64"/>
-            <RowDefinition Name="R2" Height="64"/>
-            <RowDefinition Name="R3" Height="64"/>
-            <RowDefinition Name="R4" Height="64"/>
-            <RowDefinition Name="R5" Height="64"/>
-            <RowDefinition Name="R6" Height="64"/>
-            <RowDefinition Name="R7" Height="64"/>
-            <RowDefinition Name="R8" Height="64"/>
-            <RowDefinition Name="R9" Height="64"/>
-
-
+            <RowDefinition Name="R0" Height="*"/>
+            <RowDefinition Name="R1" Height="*"/>
+            <RowDefinition Name="R2" Height="*"/>
+            <RowDefinition Name="R3" Height="*"/>
+            <RowDefinition Name="R4" Height="*"/>
+            <RowDefinition Name="R5" Height="*"/>
+            <RowDefinition Name="R6" Height="*"/>
+            <RowDefinition Name="R7" Height="*"/>
+            <RowDefinition Name="R8" Height="*"/>
+            <RowDefinition Name="R9" Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="RoseGrid" Grid.Column="0" Grid.ColumnSpan="10" Grid.Row="0" Grid.RowSpan="9" SelectionChanged="RoseGrid_SelectionChanged" AutoGenerateColumns="False">
+
+        <DataGrid x:Name="RoseberyList" Grid.Row="1" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="10">
             <!-- Bindings and column headers -->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
                 <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Lot Number" Width="100" Binding="{Binding LotNumber}"/>
                 <DataGridTextColumn Header="Date of Sale" Width="100" Binding="{Binding DateOfSale}"/>
-                <DataGridTextColumn Header="Description" Width="500" Binding="{Binding Description}"/>
-                <DataGridTextColumn Header="Collected" Width="*" Binding="{Binding Collected}"/>
-
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
             </DataGrid.Columns>
-
-            
-            
-
         </DataGrid>
 
-        <Button Margin="10,10,10,10" Content="Add To List" x:Name="AddToList" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Click="AddToList_Click"/>
-        <Button Margin="10,10,10,10" Content="Confirm Collections" x:Name="ConfirmCollections" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2"/>
-        <Button Margin="10,10,10,10" Content="Parse List" x:Name="ParseList" Grid.Row="10" Grid.Column="4" Grid.ColumnSpan="2"/>
-        <Button Margin="10,10,10,10" Content="Print List" x:Name="PrintList" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2"/>
-        <Button Margin="10,10,10,10" Content="Confirm Collections" x:Name="ConfirmCollectins" Grid.Row="10" Grid.Column="8" Grid.ColumnSpan="2"/>
+        <Button x:Name="Add" Content="Add Items To List" Grid.Column="1" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
+        <Button x:Name="Confirm" Content="Confirm Collection List" Grid.Column="4" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
+        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="6" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
+        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="8" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
+
+
+
 
     </Grid>
 </Page>

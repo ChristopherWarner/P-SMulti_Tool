@@ -10,11 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 
-
-
-namespace P_SMulti_Tool.PagesXAML.DashboardPages
+namespace P_SMulti_Tool.PagesXAML
 {
     /// <summary>
     /// Interaction logic for RoseberyList.xaml
@@ -27,7 +24,7 @@ namespace P_SMulti_Tool.PagesXAML.DashboardPages
 
             List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
 
-            RoseGrid.ItemsSource = roseberyCollections;
+            //RoseGrid.ItemsSource = roseberyCollections;
 
         }
 

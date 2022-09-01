@@ -25,5 +25,9 @@ namespace P_SMulti_Tool
             InitializeComponent();
         }
 
+        private void Rosebery_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PagesXAML.RoseberyList();
+        }
     }
 }
