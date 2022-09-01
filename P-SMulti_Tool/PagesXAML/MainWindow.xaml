@@ -47,7 +47,7 @@
             <Button x:Name="Auction" Content="Auction Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28"/>
             <Button x:Name="Overview" Content="Overview" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28"/>
         </StackPanel>
-        <Frame x:Name="Main" Grid.Row="1" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="16"/>
+        <Frame x:Name="Main" Grid.Row="1" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="16" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

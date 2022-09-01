@@ -20,6 +20,12 @@
              <ColumnDefinition Name="C7" Width="*"/>
              <ColumnDefinition Name="C8" Width="*"/>
              <ColumnDefinition Name="C9" Width="*"/>
+             <ColumnDefinition Name="C10" Width="*"/>
+             <ColumnDefinition Name="C11" Width="*"/>
+             <ColumnDefinition Name="C12" Width="*"/>
+             <ColumnDefinition Name="C13" Width="*"/>
+             <ColumnDefinition Name="C14" Width="*"/>
+             <ColumnDefinition Name="C15" Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Name="R0" Height="*"/>
@@ -34,21 +40,21 @@
             <RowDefinition Name="R9" Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="RoseberyList" Grid.Row="1" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="10">
+        <DataGrid x:Name="RoseList" Grid.Row="1" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="16" AutoGenerateColumns="False">
             <!-- Bindings and column headers -->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
                 <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Lot Number" Width="100" Binding="{Binding LotNumber}"/>
                 <DataGridTextColumn Header="Date of Sale" Width="100" Binding="{Binding DateOfSale}"/>
-                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Description" Width="1040" Binding="{Binding Description}"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button x:Name="Add" Content="Add Items To List" Grid.Column="1" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
-        <Button x:Name="Confirm" Content="Confirm Collection List" Grid.Column="4" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
-        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="6" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
-        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="8" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow"/>
+        <Button x:Name="Add" Content="Add Items To List" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" Click="Add_Click"/>
+        <Button x:Name="Confirm" Content="Confirm Collection List" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10"/>
+        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="9" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10"/>
+        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10"/>
 
 
 

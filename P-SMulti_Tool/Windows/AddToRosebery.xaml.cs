@@ -19,7 +19,7 @@ namespace P_SMulti_Tool.Windows
     public partial class AddToRosebery : Window
     {
         public static List<UserControls.UserControl1> Items = new List<UserControls.UserControl1>();
-
+        
         public AddToRosebery()
         {
             InitializeComponent();
@@ -45,6 +45,8 @@ namespace P_SMulti_Tool.Windows
                 AuctionCollectionModel.CreateAuctionCollection(JobNumberInput.Text, ClientNameInput.Text, Items[i].DescriptionInput.Text, false, DateTime.Now, DateTime.MinValue, Items[i].LotNumInput.Text, Items[i].DateOfSaleInput.Text, "Rosebery", 0);
             }
             Items.Clear();
+            Close();
+            
         }
     }
 }

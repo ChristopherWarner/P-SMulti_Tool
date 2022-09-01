@@ -48,6 +48,7 @@
             <Button Content="Add Items To List" Click="Add_Items_To_List" Grid.Column="4" Grid.ColumnSpan="2" Margin="30,10,30,10" Grid.Row="9"/>
             <TextBox x:Name="JobNumberInput" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,20,0,0" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
             <TextBox x:Name="ClientNameInput" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,20,0,0" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
+            <TextBox x:Name="NotesInput" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Margin="0,20,10,1" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
             
             
 

@@ -14,24 +14,13 @@ using System.Windows.Shapes;
 namespace P_SMulti_Tool.PagesXAML
 {
     /// <summary>
-    /// Interaction logic for RoseberyList.xaml
+    /// Interaction logic for Overview.xaml
     /// </summary>
-    public partial class RoseberyList : Page
+    public partial class Overview : Page
     {
-        public RoseberyList()
+        public Overview()
         {
             InitializeComponent();
-
-            List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
-
-            RoseList.ItemsSource = roseberyCollections;
-
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            Window addToList = new Windows.AddToRosebery();
-            addToList.Show();
         }
     }
 }
