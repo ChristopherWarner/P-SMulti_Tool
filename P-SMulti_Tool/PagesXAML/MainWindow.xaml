@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool"
-        mc:Ignorable="d" Background="Navy" SizeToContent="Width" Height="720"
+        mc:Ignorable="d" Background="Navy" Width ="1616"  Height="720" 
         Title="MainWindow">
 
     <Grid Name="GridPanel" Background="Navy">
@@ -42,12 +42,19 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="16" Grid.RowSpan="1" Background="Yellow">
             <Button x:Name="Rosebery" Content="Rosebery Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28" Click="Rosebery_Click"/>
-            <Button x:Name="Residential" Content="Residential Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28"/>
+            <Button x:Name="Residential" Content="Residential Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28" Click="Residential_Click"/>
             <Label x:Name="AppTitle" Content="Collections Manager V1" Width="400" Background="Navy" BorderBrush="Navy" BorderThickness="2" Foreground="Yellow" HorizontalContentAlignment="Center" FontSize="35"/>
-            <Button x:Name="Auction" Content="Auction Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28"/>
-            <Button x:Name="Overview" Content="Overview" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28"/>
+            <Button x:Name="Auction" Content="Auction Collections" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28" Click="Auction_Click"/>
+            <Button x:Name="Overview" Content="Overview" Width="300" BorderBrush="Navy" Background="Yellow" Foreground="Navy" FontSize="28" Click="Overview_Click"/>
         </StackPanel>
         <Frame x:Name="Main" Grid.Row="1" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="16" NavigationUIVisibility="Hidden"/>
+
+
+        <Image Grid.Row="15" Grid.Column="7" Grid.ColumnSpan="2">
+            <Image.Source>
+                <BitmapImage  UriSource="C:\Users\chris\Source\Repos\P-SMulti_Tool\P-SMulti_Tool\Images\pack-send-logo-header.png"/>
+            </Image.Source>
+        </Image>
 
     </Grid>
 </Window>

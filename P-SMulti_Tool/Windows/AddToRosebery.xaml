@@ -5,53 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool.UserControls"
         mc:Ignorable="d" Background="Navy"
-        Title="AddToRosebery" Height="460" Width="800">
+        Title="AddToRosebery" Height="460" SizeToContent="Width">
     <Grid>
         <Grid Name="GridPanel" Background="Navy" Width="800" Height="460"  
-   VerticalAlignment="Top" HorizontalAlignment="Center" >
+   VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Name="C0" Width="80"/>
-                <ColumnDefinition Name="C1" Width="80"/>
-                <ColumnDefinition Name="C2" Width="80"/>
-                <ColumnDefinition Name="C3" Width="80"/>
-                <ColumnDefinition Name="C4" Width="80"/>
-                <ColumnDefinition Name="C5" Width="80"/>
-                <ColumnDefinition Name="C6" Width="80"/>
-                <ColumnDefinition Name="C7" Width="80"/>
-                <ColumnDefinition Name="C8" Width="80"/>
-                <ColumnDefinition Name="C9" Width="80"/>
+                <ColumnDefinition Name="C0" Width="*"/>
+                <ColumnDefinition Name="C1" Width="*"/>
+                <ColumnDefinition Name="C2" Width="*"/>
+                <ColumnDefinition Name="C3" Width="*"/>
+                <ColumnDefinition Name="C4" Width="*"/>
+                <ColumnDefinition Name="C5" Width="*"/>
+                <ColumnDefinition Name="C6" Width="*"/>
+                <ColumnDefinition Name="C7" Width="*"/>
+                <ColumnDefinition Name="C8" Width="*"/>
+                <ColumnDefinition Name="C9" Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Name="R0" Height="45"/>
-                <RowDefinition Name="R1" Height="45"/>
-                <RowDefinition Name="R2" Height="45"/>
-                <RowDefinition Name="R3" Height="45"/>
-                <RowDefinition Name="R4" Height="45"/>
-                <RowDefinition Name="R5" Height="45"/>
-                <RowDefinition Name="R6" Height="45"/>
-                <RowDefinition Name="R7" Height="45"/>
-                <RowDefinition Name="R8" Height="45"/>
-                <RowDefinition Name="R" Height="45"/>
+                <RowDefinition Name="R0" Height="*"/>
+                <RowDefinition Name="R1" Height="*"/>
+                <RowDefinition Name="R2" Height="*"/>
+                <RowDefinition Name="R3" Height="*"/>
+                <RowDefinition Name="R4" Height="*"/>
+                <RowDefinition Name="R5" Height="*"/>
+                <RowDefinition Name="R6" Height="*"/>
+                <RowDefinition Name="R7" Height="*"/>
+                <RowDefinition Name="R8" Height="*"/>
+                <RowDefinition Name="R9" Height="*"/>
+                <RowDefinition Name="R10" Height="*"/>
+                <RowDefinition Name="R11" Height="*"/>
+                <RowDefinition Name="R12" Height="*"/>
+                <RowDefinition Name="R13" Height="*"/>
+                <RowDefinition Name="R14" Height="*"/>
 
 
             </Grid.RowDefinitions>
-            <ScrollViewer  x:Name="ItemScroll" Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="6" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
-                <StackPanel x:Name="ItemsStackPanel" Height="315" Width="800">
+            <ScrollViewer  x:Name="ItemScroll" Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="9" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True">
+                <StackPanel x:Name="ItemsStackPanel" Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="8">
                     <local:UserControl1 x:Name="StaticControl"/>
-
-
                 </StackPanel>
-
-
             </ScrollViewer>
-            <Button Content="Add Item" Click="Add_Item_Click" Grid.Column="7" Grid.ColumnSpan="2" Margin="50,10,50,10" Grid.Row="1"/>
-            <Button Content="Add Items To List" Click="Add_Items_To_List" Grid.Column="4" Grid.ColumnSpan="2" Margin="30,10,30,10" Grid.Row="9"/>
-            <TextBox x:Name="JobNumberInput" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,20,0,0" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
-            <TextBox x:Name="ClientNameInput" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,20,0,0" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
-            <TextBox x:Name="NotesInput" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Margin="0,20,10,1" BorderBrush="Yellow" BorderThickness="3" Background="Navy"/>
-            
-            
 
+            <Button Content="Add Item" Click="Add_Item_Click" Grid.Row="1" Grid.RowSpan="2" Grid.Column="8" Grid.ColumnSpan="2" Margin="50,20,50,20" />
+            <Button Content="Add Items To List" Click="Add_Items_To_List" Grid.RowSpan="2" Grid.Row="13" Grid.Column="4" Grid.ColumnSpan="2" Margin="30,10,30,30"/>
+            <TextBox x:Name="JobNumberInput" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+            <TextBox x:Name="ClientNameInput" Grid.Row="1" Grid.RowSpan="2" Grid.Column="6" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+            <TextBox x:Name="NotesInput" Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="8" Margin="20,30,10,10" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+
+            <TextBlock x:Name="JobNumberText" Text="Job Number" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10,20,71,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="ClientNameText" Text="Client Name" Grid.Row="1" Grid.RowSpan="2" Grid.Column="5" Margin="10,20,66,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="NotesText" Text="Notes" Grid.Row="3" Grid.Column="1" Margin="50,0,61,5" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
         </Grid>
 
 

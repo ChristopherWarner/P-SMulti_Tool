@@ -28,7 +28,22 @@ namespace P_SMulti_Tool
 
         private void Rosebery_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new PagesXAML.RoseberyList();
+            Main.Content = new PagesXAML.RoseberyCollections();
+        }
+
+        private void Residential_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PagesXAML.ResidentialCollections();
+        }
+
+        private void Auction_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PagesXAML.AuctionCollections();
+        }
+
+        private void Overview_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PagesXAML.Overview();
         }
     }
 }
