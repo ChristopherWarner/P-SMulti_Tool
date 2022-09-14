@@ -50,11 +50,5 @@
         <Frame x:Name="Main" Grid.Row="1" Grid.RowSpan="10" Grid.Column="0" Grid.ColumnSpan="16" NavigationUIVisibility="Hidden"/>
 
 
-        <Image Grid.Row="15" Grid.Column="7" Grid.ColumnSpan="2">
-            <Image.Source>
-                <BitmapImage  UriSource="C:\Users\chris\Source\Repos\P-SMulti_Tool\P-SMulti_Tool\Images\pack-send-logo-header.png"/>
-            </Image.Source>
-        </Image>
-
     </Grid>
 </Window>

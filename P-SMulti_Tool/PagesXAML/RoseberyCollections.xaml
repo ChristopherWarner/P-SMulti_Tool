@@ -52,9 +52,10 @@
         </DataGrid>
 
         <Button x:Name="Add" Content="Add Items To List" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" Click="Add_Click" FontSize="16"/>
-        <Button x:Name="Confirm" Content="Confirm Collection List" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16"/>
-        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="9" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16"/>
-        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16"/>
+        <Button x:Name="Confirm" Content="Confirm Collection List" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Confirm_Click"/>
+        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Edit_Click"/>
+        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Remove_Click"/>
+        <Button x:Name="PreviousLists" Content="Previous Lists" Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="PreviousLists_Click"/>
         
 
 

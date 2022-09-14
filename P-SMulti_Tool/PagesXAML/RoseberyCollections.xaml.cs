@@ -33,5 +33,30 @@ namespace P_SMulti_Tool.PagesXAML
             Window addToList = new Windows.AddToRosebery();
             addToList.Show();
         }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            
+            List<AuctionCollectionModel> toRemove = new List<AuctionCollectionModel>();
+
+
+            //Get collections and send to SQLite data access class
+          
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            //export to word document
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            //bring up window to edit collection
+        }
+
+        private void PreviousLists_Click(object sender, RoutedEventArgs e)
+        {
+            //Bring up previous list window
+        }
     }
 }

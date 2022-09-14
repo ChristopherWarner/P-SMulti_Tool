@@ -4,11 +4,64 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:P_SMulti_Tool.PagesXAML"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d" Background="Navy"
+      d:DesignHeight="576" d:DesignWidth="1600"
       Title="ResidentialCollections">
 
-    <Grid>
-        
+    <Grid x:Name="MainGrid" Background="Navy">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="C0" Width="*"/>
+            <ColumnDefinition Name="C1" Width="*"/>
+            <ColumnDefinition Name="C2" Width="*"/>
+            <ColumnDefinition Name="C3" Width="*"/>
+            <ColumnDefinition Name="C4" Width="*"/>
+            <ColumnDefinition Name="C5" Width="*"/>
+            <ColumnDefinition Name="C6" Width="*"/>
+            <ColumnDefinition Name="C7" Width="*"/>
+            <ColumnDefinition Name="C8" Width="*"/>
+            <ColumnDefinition Name="C9" Width="*"/>
+            <ColumnDefinition Name="C10" Width="*"/>
+            <ColumnDefinition Name="C11" Width="*"/>
+            <ColumnDefinition Name="C12" Width="*"/>
+            <ColumnDefinition Name="C13" Width="*"/>
+            <ColumnDefinition Name="C14" Width="*"/>
+            <ColumnDefinition Name="C15" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="R0" Height="*"/>
+            <RowDefinition Name="R1" Height="*"/>
+            <RowDefinition Name="R2" Height="*"/>
+            <RowDefinition Name="R3" Height="*"/>
+            <RowDefinition Name="R4" Height="*"/>
+            <RowDefinition Name="R5" Height="*"/>
+            <RowDefinition Name="R6" Height="*"/>
+            <RowDefinition Name="R7" Height="*"/>
+            <RowDefinition Name="R8" Height="*"/>
+            <RowDefinition Name="R9" Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="RoseList" Grid.Row="1" Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="16" AutoGenerateColumns="False">
+            <!-- Bindings and column headers -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="JobNumber" Width="100" Binding="{Binding JobNumber}"/>
+                <DataGridTextColumn Header="Name" Width="250" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Lot Number" Width="100" Binding="{Binding LotNumber}"/>
+                <DataGridTextColumn Header="Date of Sale" Width="100" Binding="{Binding DateOfSale}"/>
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button x:Name="Add" Content="Add Collection" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" Click="Add_Click" FontSize="16"/>
+        <Button x:Name="Confirm" Content="Mark As Collected" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Confirm_Click"/>
+        <Button x:Name="Edit" Content="Edit Selected Entry" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Edit_Click"/>
+        <Button x:Name="Remove" Content="Remove Selected Entries" Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="Remove_Click"/>
+        <Button x:Name="PreviousCollections" Content="Previous Collections" Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="0" Background="Yellow" Foreground="Navy" BorderBrush="Yellow" Margin="10,10,10,10" FontSize="16" Click="PreviousLists_Click"/>
+
+
+
+
+
+
     </Grid>
 </Page>
