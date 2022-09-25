@@ -22,10 +22,15 @@ namespace P_SMulti_Tool.PagesXAML
         {
             InitializeComponent();
 
+            PopulateDataGrid();
+
+        }
+
+        private void PopulateDataGrid()
+        {
             List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
 
             RoseList.ItemsSource = roseberyCollections;
-
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -36,17 +41,19 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            
-            List<AuctionCollectionModel> toRemove = new List<AuctionCollectionModel>();
+            foreach (AuctionCollectionModel toDelete in RoseList.SelectedItems)
+            {
+                SQLiteDataAccess.RemoveAuctionCollection(toDelete);
+            }
 
-
-            //Get collections and send to SQLite data access class
+            RoseList.Items.Clear();
+            PopulateDataGrid();
           
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            //export to word document
+            //export to Excel document
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -56,7 +63,7 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void PreviousLists_Click(object sender, RoutedEventArgs e)
         {
-            //Bring up previous list window
+            // change data grid view to previous confrimed collection list as date specified
         }
     }
 }

@@ -22,4 +22,8 @@
     <Page Include="App.xaml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\ExportToExcel\" />
+  </ItemGroup>
+
 </Project>
