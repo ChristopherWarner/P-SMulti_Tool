@@ -41,12 +41,14 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
+           
             foreach (AuctionCollectionModel toDelete in RoseList.SelectedItems)
             {
                 SQLiteDataAccess.RemoveAuctionCollection(toDelete);
             }
-
-            RoseList.Items.Clear();
+            
+            
+            RoseList.ItemsSource = null;
             PopulateDataGrid();
           
         }
@@ -63,7 +65,7 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void PreviousLists_Click(object sender, RoutedEventArgs e)
         {
-            // change data grid view to previous confrimed collection list as date specified
+            
         }
     }
 }

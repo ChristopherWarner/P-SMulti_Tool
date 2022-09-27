@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Database\ExportToExcel\**" />
+    <EmbeddedResource Remove="Database\ExportToExcel\**" />
+    <None Remove="Database\ExportToExcel\**" />
+    <Page Remove="Database\ExportToExcel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="maindb.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -20,10 +27,6 @@
 
   <ItemGroup>
     <Page Include="App.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Database\ExportToExcel\" />
   </ItemGroup>
 
 </Project>

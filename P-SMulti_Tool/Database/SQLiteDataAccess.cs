@@ -94,7 +94,11 @@ namespace P_SMulti_Tool
 
         public static void RemoveAuctionCollection(AuctionCollectionModel toDelete)
         {
-
+           
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE  from AuctionCollections WHERE  (JobNumber = @JobNumber, Name = @Name, Description = @Description, Collected = @Collected, CreateDate = @CreateDate, CollectedOn = @CollectedOn, LotNumber = @LotNumber, DateOfSale = @DateOfSale, AuctionHouse = @AuctionHouse)", toDelete);
+            }
         }
 
 
