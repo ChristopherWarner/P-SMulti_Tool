@@ -97,7 +97,7 @@ namespace P_SMulti_Tool
            
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("DELETE  from AuctionCollections WHERE  (JobNumber = @JobNumber, Name = @Name, Description = @Description, Collected = @Collected, CreateDate = @CreateDate, CollectedOn = @CollectedOn, LotNumber = @LotNumber, DateOfSale = @DateOfSale, AuctionHouse = @AuctionHouse)", toDelete);
+                cnn.Execute("DELETE  from AuctionCollections WHERE  (JobNumber = @JobNumber AND Name = @Name AND Description = @Description AND Collected = @Collected AND CreateDate = @CreateDate AND CollectedOn = @CollectedOn AND LotNumber = @LotNumber AND DateOfSale = @DateOfSale AND AuctionHouse = @AuctionHouse)", toDelete);
             }
         }
 

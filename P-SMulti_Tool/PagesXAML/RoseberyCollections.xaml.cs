@@ -60,7 +60,8 @@ namespace P_SMulti_Tool.PagesXAML
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            //bring up window to edit collection
+            Window roseberyCollectionEdit = new Windows.EditRoseberyCollection();
+            roseberyCollectionEdit.Show();
         }
 
         private void PreviousLists_Click(object sender, RoutedEventArgs e)

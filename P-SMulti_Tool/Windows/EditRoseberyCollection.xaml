@@ -4,9 +4,42 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P_SMulti_Tool.Windows"
-        mc:Ignorable="d"
-        Title="EditRoseberyCollection" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        mc:Ignorable="d" Background="Navy"
+        Title="EditRoseberyCollection" Height="460" SizeToContent="Width" Width="920">
+    <Window>
+        <Grid Name="GridPanel" Background="Navy" Width="800" Height="460"  
+   VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="C0" Width="*"/>
+                <ColumnDefinition Name="C1" Width="*"/>
+                <ColumnDefinition Name="C2" Width="*"/>
+                <ColumnDefinition Name="C3" Width="*"/>
+                <ColumnDefinition Name="C4" Width="*"/>
+                <ColumnDefinition Name="C5" Width="*"/>
+                <ColumnDefinition Name="C6" Width="*"/>
+                <ColumnDefinition Name="C7" Width="*"/>
+                <ColumnDefinition Name="C8" Width="*"/>
+                <ColumnDefinition Name="C9" Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Name="R0" Height="*"/>
+                <RowDefinition Name="R1" Height="*"/>
+                <RowDefinition Name="R2" Height="*"/>
+                <RowDefinition Name="R3" Height="*"/>
+                <RowDefinition Name="R4" Height="*"/>
+                <RowDefinition Name="R5" Height="*"/>
+                <RowDefinition Name="R6" Height="*"/>
+                <RowDefinition Name="R7" Height="*"/>
+                <RowDefinition Name="R8" Height="*"/>
+                <RowDefinition Name="R9" Height="*"/>
+                <RowDefinition Name="R10" Height="*"/>
+                <RowDefinition Name="R11" Height="*"/>
+                <RowDefinition Name="R12" Height="*"/>
+                <RowDefinition Name="R13" Height="*"/>
+                <RowDefinition Name="R14" Height="*"/>
+
+
+            </Grid.RowDefinitions>
+           
+        </Grid>
 </Window>
