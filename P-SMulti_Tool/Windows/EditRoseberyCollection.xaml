@@ -6,40 +6,55 @@
         xmlns:local="clr-namespace:P_SMulti_Tool.Windows"
         mc:Ignorable="d" Background="Navy"
         Title="EditRoseberyCollection" Height="460" SizeToContent="Width" Width="920">
-    <Window>
-        <Grid Name="GridPanel" Background="Navy" Width="800" Height="460"  
-   VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Name="C0" Width="*"/>
-                <ColumnDefinition Name="C1" Width="*"/>
-                <ColumnDefinition Name="C2" Width="*"/>
-                <ColumnDefinition Name="C3" Width="*"/>
-                <ColumnDefinition Name="C4" Width="*"/>
-                <ColumnDefinition Name="C5" Width="*"/>
-                <ColumnDefinition Name="C6" Width="*"/>
-                <ColumnDefinition Name="C7" Width="*"/>
-                <ColumnDefinition Name="C8" Width="*"/>
-                <ColumnDefinition Name="C9" Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Name="R0" Height="*"/>
-                <RowDefinition Name="R1" Height="*"/>
-                <RowDefinition Name="R2" Height="*"/>
-                <RowDefinition Name="R3" Height="*"/>
-                <RowDefinition Name="R4" Height="*"/>
-                <RowDefinition Name="R5" Height="*"/>
-                <RowDefinition Name="R6" Height="*"/>
-                <RowDefinition Name="R7" Height="*"/>
-                <RowDefinition Name="R8" Height="*"/>
-                <RowDefinition Name="R9" Height="*"/>
-                <RowDefinition Name="R10" Height="*"/>
-                <RowDefinition Name="R11" Height="*"/>
-                <RowDefinition Name="R12" Height="*"/>
-                <RowDefinition Name="R13" Height="*"/>
-                <RowDefinition Name="R14" Height="*"/>
+
+    <Grid Name="GridPanel" Background="Navy" Width="920" Height="460">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="C0" Width="*"/>
+            <ColumnDefinition Name="C1" Width="*"/>
+            <ColumnDefinition Name="C2" Width="*"/>
+            <ColumnDefinition Name="C3" Width="*"/>
+            <ColumnDefinition Name="C4" Width="*"/>
+            <ColumnDefinition Name="C5" Width="*"/>
+            <ColumnDefinition Name="C6" Width="*"/>
+            <ColumnDefinition Name="C7" Width="*"/>
+            <ColumnDefinition Name="C8" Width="*"/>
+            <ColumnDefinition Name="C9" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="R0" Height="*"/>
+            <RowDefinition Name="R1" Height="*"/>
+            <RowDefinition Name="R2" Height="*"/>
+            <RowDefinition Name="R3" Height="*"/>
+            <RowDefinition Name="R4" Height="*"/>
+            <RowDefinition Name="R5" Height="*"/>
+            <RowDefinition Name="R6" Height="*"/>
+            <RowDefinition Name="R7" Height="*"/>
+            <RowDefinition Name="R8" Height="*"/>
+            <RowDefinition Name="R9" Height="*"/>
+            <RowDefinition Name="R10" Height="*"/>
+            <RowDefinition Name="R11" Height="*"/>
+            <RowDefinition Name="R12" Height="*"/>
+            <RowDefinition Name="R13" Height="*"/>
+            <RowDefinition Name="R14" Height="*"/>
 
 
-            </Grid.RowDefinitions>
-           
-        </Grid>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="NameInput" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+        <TextBox x:Name="JobNumberInput" Grid.Row="1" Grid.RowSpan="2" Grid.Column="6" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+        <TextBox x:Name="LotNumberInput" Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+        <TextBox x:Name="DateOfSaleInput" Grid.Row="2" Grid.RowSpan="2" Grid.Column="6" Grid.ColumnSpan="2" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+        <TextBox x:Name="DescriptionInput" Grid.Row="4" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="6" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+        <TextBox x:Name="DateOfInput" Grid.Row="8" Grid.RowSpan="4" Grid.Column="2" Grid.ColumnSpan="6" Margin="20,20,0,20" BorderBrush="Yellow" BorderThickness="2" Background="Navy" Foreground="Yellow"/>
+
+
+        <TextBlock x:Name="NameText" Text="Client Name" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10,20,71,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="JobNumberText" Text="Job Number" Grid.Row="1" Grid.RowSpan="2" Grid.Column="5" Margin="10,20,66,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="LotNumberText" Text="Lot Number" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Margin="10,20,71,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="DateOfSaleText" Text="Date Of Sale" Grid.Row="2" Grid.RowSpan="2" Grid.Column="5" Margin="10,20,66,20" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="DescriptionText" Text="Description" Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" Margin="15,30,61,10" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="NotesText" Text="Notes" Grid.Row="9" Grid.Column="1" Margin="50,0,61,5" Foreground="Yellow" FontSize="14" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
 </Window>

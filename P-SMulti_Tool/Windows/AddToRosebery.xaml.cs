@@ -46,7 +46,6 @@ namespace P_SMulti_Tool.Windows
             }
             Items.Clear();
             Close();
-            
         }
     }
 }
