@@ -17,9 +17,22 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class EditRoseberyCollection : Window
     {
-        public EditRoseberyCollection()
+        public EditRoseberyCollection(AuctionCollectionModel toEdit)
         {
             InitializeComponent();
+
+            Set_Collection_Model_Data(toEdit);
+        }
+
+        private void Set_Collection_Model_Data(AuctionCollectionModel toEdit)
+        {
+            NameInput.Text = toEdit.Name;
+            JobNumberInput.Text = toEdit.JobNumber;
+            LotNumberInput.Text = toEdit.LotNumber;
+            DateOfSaleInput.Text = toEdit.DateOfSale;
+            DescriptionInput.Text = toEdit.Description;
+            DateOfSaleInput.Text = toEdit.DateOfSale;
+ 
         }
     }
 }

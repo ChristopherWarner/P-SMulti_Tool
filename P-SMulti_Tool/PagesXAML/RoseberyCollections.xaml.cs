@@ -56,12 +56,24 @@ namespace P_SMulti_Tool.PagesXAML
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             //export to Excel document
+            // save list to record of lists
+            //
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            Window roseberyCollectionEdit = new Windows.EditRoseberyCollection();
-            roseberyCollectionEdit.Show();
+            if (RoseList.SelectedItems.Count == 1)
+            { 
+                foreach(AuctionCollectionModel toEdit in RoseList.SelectedItems)
+                {
+                    Window roseberyCollectionEdit = new Windows.EditRoseberyCollection(toEdit);
+                    roseberyCollectionEdit.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Only one record can be modified at a time");
+            }
         }
 
         private void PreviousLists_Click(object sender, RoutedEventArgs e)
