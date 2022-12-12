@@ -18,6 +18,8 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class AddToRosebery : Window
     {
+        public delegate void UpdateRoseberyGrid();
+
         public static List<UserControls.UserControl1> Items = new List<UserControls.UserControl1>();
         
         public AddToRosebery()

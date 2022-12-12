@@ -18,6 +18,10 @@ namespace P_SMulti_Tool.PagesXAML
     /// </summary>
     public partial class RoseberyCollections : Page
     {
+        public delegate void RefreshList();
+
+        public event RefreshList RefreshListEvent;
+
         public RoseberyCollections()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace P_SMulti_Tool.PagesXAML
             PopulateDataGrid();
 
         }
-
+       
         private void PopulateDataGrid()
         {
             List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
@@ -38,6 +42,8 @@ namespace P_SMulti_Tool.PagesXAML
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Window addToList = new Windows.AddToRosebery();
+            RefreshListEvent += new RefreshList(PopulateDataGrid);
+            addToList.UpdateRoseberyGrid = 
             addToList.Show();
         }
 
