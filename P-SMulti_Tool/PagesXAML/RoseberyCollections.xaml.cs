@@ -35,15 +35,19 @@ namespace P_SMulti_Tool.PagesXAML
             List<AuctionCollectionModel> roseberyCollections = SQLiteDataAccess.LoadAuctionCollections();
 
              RoseList.ItemsSource = roseberyCollections;
+        }
 
-            
+        private void UpdateRoseberyGrid()
+        {
+            RoseList.ItemsSource = null;
+            PopulateDataGrid();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            Window addToList = new Windows.AddToRosebery();
-            RefreshListEvent += new RefreshList(PopulateDataGrid);
-            addToList.UpdateRoseberyGrid = 
+            Windows.AddToRosebery addToList = new Windows.AddToRosebery();
+            RefreshListEvent += new RefreshList(UpdateRoseberyGrid);
+            addToList.UpdateRoseberyGrid = RefreshListEvent;
             addToList.Show();
         }
 
@@ -54,9 +58,8 @@ namespace P_SMulti_Tool.PagesXAML
             {
                 SQLiteDataAccess.RemoveAuctionCollection(toDelete);
             }
-            
-            RoseList.ItemsSource = null;
-            PopulateDataGrid();
+
+            UpdateRoseberyGrid();
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)

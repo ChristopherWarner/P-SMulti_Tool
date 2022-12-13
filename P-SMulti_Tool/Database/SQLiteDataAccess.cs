@@ -90,7 +90,7 @@ namespace P_SMulti_Tool
         }
 
         //****** - End of Save Methods - *******//
-        //****** - Start of Remove Methods - *******//
+        //****** - Remove Method - *******//
 
         public static void RemoveAuctionCollection(AuctionCollectionModel toDelete)
         {

@@ -18,7 +18,7 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class AddToRosebery : Window
     {
-        public delegate void UpdateRoseberyGrid();
+        public Delegate UpdateRoseberyGrid;
 
         public static List<UserControls.UserControl1> Items = new List<UserControls.UserControl1>();
         
@@ -47,6 +47,7 @@ namespace P_SMulti_Tool.Windows
                 AuctionCollectionModel.CreateAuctionCollection(JobNumberInput.Text, ClientNameInput.Text, Items[i].DescriptionInput.Text, false, DateTime.Now, DateTime.MinValue, Items[i].LotNumInput.Text, Items[i].DateOfSaleInput.Text, "Rosebery", 0);
             }
             Items.Clear();
+            UpdateRoseberyGrid?.DynamicInvoke();
             Close();
         }
     }
