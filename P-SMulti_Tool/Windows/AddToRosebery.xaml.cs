@@ -44,11 +44,16 @@ namespace P_SMulti_Tool.Windows
         {
             for(int i = 0; i < Items.Count; i++)
             {
+
                 AuctionCollectionModel.CreateAuctionCollection(JobNumberInput.Text, ClientNameInput.Text, Items[i].DescriptionInput.Text, false, DateTime.Now, DateTime.MinValue, Items[i].LotNumInput.Text, Items[i].DateOfSaleInput.Text, "Rosebery", 0);
             }
             Items.Clear();
             UpdateRoseberyGrid?.DynamicInvoke();
             Close();
         }
+        
+        
+
+        
     }
 }

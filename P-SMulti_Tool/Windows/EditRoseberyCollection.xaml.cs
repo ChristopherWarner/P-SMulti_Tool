@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,13 @@ namespace P_SMulti_Tool.Windows
     /// </summary>
     public partial class EditRoseberyCollection : Window
     {
+        public AuctionCollectionModel toEdit;
+
         public EditRoseberyCollection(AuctionCollectionModel toEdit)
         {
             InitializeComponent();
+
+            this.toEdit = toEdit;
 
             Set_Collection_Model_Data(toEdit);
         }
@@ -33,6 +38,22 @@ namespace P_SMulti_Tool.Windows
             DescriptionInput.Text = toEdit.Description;
             DateOfSaleInput.Text = toEdit.DateOfSale;
  
+        }
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            NameInput.Text = toEdit.Name;
+            JobNumberInput.Text = toEdit.JobNumber;
+            LotNumberInput.Text = toEdit.LotNumber;
+            DateOfSaleInput.Text = toEdit.DateOfSale;
+            DescriptionInput.Text = toEdit.Description;
+            DateOfSaleInput.Text = toEdit.DateOfSale;
+
+             string message = Convert.ToString(SQLiteDataAccess.ReturnCollectionKey(toEdit));
+
+            MessageBox.Show(message);
+
+            Close();
         }
     }
 }

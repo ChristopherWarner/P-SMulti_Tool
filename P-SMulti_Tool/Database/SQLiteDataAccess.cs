@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Data.SqlClient;
 using Dapper;
+using System.Reflection.Metadata.Ecma335;
 
 namespace P_SMulti_Tool
 {
@@ -19,6 +20,15 @@ namespace P_SMulti_Tool
         }
 
         //****** - Start of Load Methods - *******//
+
+        public static int ReturnCollectionKey(AuctionCollectionModel ToRetrieve)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<AuctionCollectionModel>("select CollectionNumber from AuctionCollections Where (JobNumber = @JobNumber AND Name = @Name AND Description = @Description AND Collected = @Collected AND CreateDate = @CreateDate AND CollectedOn = @CollectedOn AND LotNumber = @LotNumber AND DateOfSale = @DateOfSale AND AuctionHouse = @AuctionHouse)", ToRetrieve);
+                return Convert.ToInt32(output);
+            }
+        }
 
         public static List<ResidentialCollectionModel> LoadResidentialCollections()
         {
@@ -54,6 +64,17 @@ namespace P_SMulti_Tool
 
 
         //****** - End of Load Methods - *******//
+
+        //****** - Overwrite Method - ******//
+        public static void OverwriteDatabaseEntry(AuctionCollectionModel Original, AuctionCollectionModel Updated)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                
+            }
+        }
+
+        //****** - Overwrite Method - ******//
 
         //****** - Start of Save Methods - *******//
 

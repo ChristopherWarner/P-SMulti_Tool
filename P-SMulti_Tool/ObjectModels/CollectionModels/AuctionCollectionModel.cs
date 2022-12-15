@@ -37,7 +37,6 @@ namespace P_SMulti_Tool
         {
             AuctionCollectionModel created = new AuctionCollectionModel(jobNumber, name, description, collected, createdOn, collectedOn, lotNumber, dateOfSale, auctionHouse, collectionListIndex);
 
-
             SQLiteDataAccess.SaveAuctionCollectionModel(created);
         }
         
